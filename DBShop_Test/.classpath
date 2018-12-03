@@ -18,6 +18,7 @@
 	<classpathentry kind="lib" path="libs/testng.jar"/>
 	<classpathentry kind="lib" path="libs/velocity-dep-1.4.jar"/>
 	<classpathentry kind="lib" path="libs/xmlbeans-3.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/freemarker.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/auto2018"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
