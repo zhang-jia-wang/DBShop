@@ -18,7 +18,7 @@ public class Goods_Test extends BaseTest {
 //	@BeforeClass
 	@Test(priority=0)
 	// ---------------------------登录界面（完成）-----------------------------
-	public void login() 
+	public void login() throws Exception 
 	{
 		webtest.open("http://10.7.1.9:8686/DBShop/admin");
 		webtest.type("name=user_name", "admin");
@@ -29,7 +29,7 @@ public class Goods_Test extends BaseTest {
 
 	@Test(priority=1)
 	// ---------------------------管理商品（完成）-------------------------------
-	public void goods_test()
+	public void goods_test()throws Exception
 	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		// 管理商品
@@ -98,7 +98,7 @@ public class Goods_Test extends BaseTest {
 		
 	@Test(priority=4)
 	// ----------------------------------商品品牌（完成）-------------------------------	
-	public void brand_test()
+	public void brand_test()throws Exception
 	{
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/goods/brand']");
@@ -110,7 +110,7 @@ public class Goods_Test extends BaseTest {
 		
 	@Test(priority=5)
 	// ----------------------------------商品评价（完成）-------------------------------
-	public void evaluate_test()
+	public void evaluate_test()throws Exception
 	{
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品评价')]");
@@ -119,7 +119,7 @@ public class Goods_Test extends BaseTest {
 	
 	@Test(priority=6)
 	//---------------------------------- 商品咨询（完成）------------------------------
-	public void consult_test()
+	public void consult_test()throws Exception
 	{
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品咨询')]");
@@ -159,7 +159,7 @@ public class Goods_Test extends BaseTest {
 
 	@Test(priority=8)
 	// ----------------------------------商品索引(完成)-------------------------------
-	public void index_test()
+	public void index_test()throws Exception
 	{
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品索引')]");
