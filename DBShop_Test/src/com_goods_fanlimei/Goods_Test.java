@@ -5,6 +5,7 @@ package com_goods_fanlimei;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
@@ -14,21 +15,22 @@ import com.webtest.core.BaseTest;
  *
  */
 public class Goods_Test extends BaseTest {
-	
+//	@BeforeClass
 	@Test(priority=0)
+	// ---------------------------登录界面（完成）-----------------------------
 	public void login() 
 	{
-// ---------------------------登录界面（完成）-----------------------------
 		webtest.open("http://10.7.1.9:8686/DBShop/admin");
 		webtest.type("name=user_name", "admin");
 		webtest.type("name=user_passwd", "111111");
 		webtest.click("xpath=//button[@type='submit']");		
 	}
 	
+
 	@Test(priority=1)
+	// ---------------------------管理商品（完成）-------------------------------
 	public void goods_test()
 	{	
-// ---------------------------管理商品（完成）-------------------------------
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		// 管理商品
 		webtest.click("xpath=//a[contains(.,'管理商品')]");
@@ -52,9 +54,9 @@ public class Goods_Test extends BaseTest {
 	}
 	
 	@Test(priority=2)
+	//---------------------------------- 管理分类（完成）------------------------------------
 	public void class_test() throws Exception 
 	{
-//---------------------------------- 管理分类（完成）------------------------------------
 		//商品分类
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'管理分类')]");
@@ -73,10 +75,9 @@ public class Goods_Test extends BaseTest {
 	}	
 	
 	@Test(priority=3)
+	//--------------------------- -------商品属性(完成）-------------------------------
 	public void property_test() throws Exception 
 	{
-		
-//--------------------------- -------商品属性(完成）-------------------------------
 		//属性分组
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'商品属性')]");
@@ -96,38 +97,39 @@ public class Goods_Test extends BaseTest {
 	}	
 		
 	@Test(priority=4)
+	// ----------------------------------商品品牌（完成）-------------------------------	
 	public void brand_test()
 	{
-// ----------------------------------商品品牌（完成）-------------------------------		
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/goods/brand']");
 		webtest.click("xpath=//a[@class='btn btn-small btn-primary']");
 		webtest.type("name=brand_name", "DELL");
 		webtest.click("xpath=//button[@type='submit']");
+		
 	}
 		
 	@Test(priority=5)
+	// ----------------------------------商品评价（完成）-------------------------------
 	public void evaluate_test()
 	{
-// ----------------------------------商品评价（完成）-------------------------------
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品评价')]");
 	}
 		
 	
 	@Test(priority=6)
+	//---------------------------------- 商品咨询（完成）------------------------------
 	public void consult_test()
 	{
-//---------------------------------- 商品咨询（完成）------------------------------
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品咨询')]");
 	}	
 		
 	
 	@Test(priority=7)
+	//---------------------------------- 商品标签（完成）------------------------------
 	public void label_test() throws Exception
 	{
-//---------------------------------- 商品标签（完成）------------------------------
 		//商品标签分组
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'商品标签')]");
@@ -143,6 +145,8 @@ public class Goods_Test extends BaseTest {
 		webtest.type("name=tag_type", "手机端首页商品");
 		webtest.type("name=tag_name", "热卖品");
 		webtest.click("xpath=//button[@type='submit']");
+//		driver.findElement(By.xpath("//label[contains(.,'请选择标签类型')]"));
+		assertTrue(webtest.ifContains("请选择标签类型"));
 		//普通商品标签
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'商品标签')]");
@@ -154,9 +158,9 @@ public class Goods_Test extends BaseTest {
 	}
 
 	@Test(priority=8)
+	// ----------------------------------商品索引(完成)-------------------------------
 	public void index_test()
 	{
-// ----------------------------------商品索引(完成)-------------------------------
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品索引')]");
 		webtest.click("xpath=//input[@name='goods_index']");
