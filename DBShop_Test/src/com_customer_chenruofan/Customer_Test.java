@@ -11,18 +11,6 @@ import com.webtest.core.BaseTest;
 import com.webtest.dataprovider.NSDataProvider;
 
 public class Customer_Test extends BaseTest {
-	// ================================= 登 录
-	@BeforeClass
-	public void login() throws Exception {
-		webtest.open("http://localhost:8032/DBShop/admin");
-		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
-		webtest.click("class=btn");
-		webtest.click("xpath=//a[text()='客户管理 ']");
-		webtest.click("xpath=//a[text()='管理客户']");
-		assertTrue(webtest.ifContains("退出系统"));
-	}
-
 	@AfterClass
 	public void quit() {
 		webtest.quit();
@@ -31,6 +19,14 @@ public class Customer_Test extends BaseTest {
 	// =================================搜索客户(√)========================================================
 	@Test
 	public void search_Customer() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.type("xpath=//input[@name='user_start_id']", "1");
 		webtest.type("xpath=//input[@name='user_end_id']", "10");
 		webtest.type("xpath=//input[@name='user_name']", "测试用户2");
@@ -44,6 +40,14 @@ public class Customer_Test extends BaseTest {
 	// =================================编辑客户(√)========================================================
 	@Test
 	public void edit_Customer() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[1]");// td从1开始数，tr从0开始数a从1开始数
 		webtest.click("xpath=//input[@id='user_email']");
 		webtest.deleteContent("xpath=//input[@id='user_email']");
@@ -54,6 +58,14 @@ public class Customer_Test extends BaseTest {
 	// =================================余额充值(√)========================================================
 	@Test
 	public void balance_Recharge() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[2]");
 		webtest.type("id=money_change_num", "50");
 		webtest.type("id=money_pay_info", "备注");
@@ -63,6 +75,14 @@ public class Customer_Test extends BaseTest {
 	// =================================积分调整(√)========================================================
 	@Test
 	public void score_Adjust() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[3]");
 		webtest.type("xpath=//input[@id='change_user_integral_num']", "10");
 		webtest.type("xpath=//textarea[@id='integral_log_info']", "备注信息");
@@ -72,6 +92,14 @@ public class Customer_Test extends BaseTest {
 	// =================================删除用户(√)========================================================
 	@Test
 	public void delete_Customer() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		try {
 			webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[4]");
 			webtest.alertCancel();
@@ -84,6 +112,14 @@ public class Customer_Test extends BaseTest {
 	// =================================全选操作(√)========================================================
 	@Test
 	public void select_All() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		try {
 			webtest.click("xpath=//input[@id='select_checkbox_state_1']");
 			webtest.type("id=allEdit", "删除客户");
@@ -99,6 +135,14 @@ public class Customer_Test extends BaseTest {
 	@Test(dataProvider = "excel_add_customer", dataProviderClass = NSDataProvider.class)
 	public void add_Customer(String group_id, String user_name, String user_sex, String user_email, String password)
 			throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//a[contains(.,' 添加新客户')]");
 		webtest.type("id=group_id", group_id);
 		webtest.type("id=user_name", user_name);
@@ -113,6 +157,14 @@ public class Customer_Test extends BaseTest {
 	// =================================编辑客户扩展信息(√)========================================================
 	@Test
 	public void edit_ExtendManage() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='客户扩展信息']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//table/tbody/tr[1]/td[7]/a[1]");
 		webtest.click("id=field_title");
 		webtest.deleteContent("id=field_title");
@@ -123,6 +175,14 @@ public class Customer_Test extends BaseTest {
 	// =================================删除客户扩展信息(√)========================================================
 	@Test
 	public void delete_ExtendManage() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='客户扩展信息']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		try {
 			webtest.click("xpath=//table/tbody/tr[1]/td[7]/a[2]");
 			webtest.alertAccept();
@@ -135,6 +195,14 @@ public class Customer_Test extends BaseTest {
 	// =================================新加客户扩展信息(√)========================================================
 	@Test
 	public void add_ExtendManage() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='客户扩展信息']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//a[contains(.,' 添加扩展信息')]");
 		webtest.type("id=field_name", "testcase1");
 		webtest.type("id=field_title", "测试用例1");
@@ -145,6 +213,14 @@ public class Customer_Test extends BaseTest {
 	// =================================编辑客户组信息(√)========================================================
 	@Test
 	public void edit_CustomerGroup() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户组']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//table/tbody/tr[2]/td[5]/a[1]");
 		webtest.click("id=user_group_name");
 		webtest.deleteContent("id=user_group_name");
@@ -155,6 +231,14 @@ public class Customer_Test extends BaseTest {
 	// =================================删除客户组信息(√)========================================================
 	@Test
 	public void delete_CustomerGroup() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户组']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		try {
 			webtest.click("xpath=//table/tbody/tr[2]/td[5]/a[2]");
 			webtest.alertAccept();
@@ -167,6 +251,14 @@ public class Customer_Test extends BaseTest {
 	// =================================新加客户组信息(√)========================================================
 	@Test
 	public void add_CustomerGroup() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.click("xpath=//a[text()='管理客户组']");
+		assertTrue(webtest.ifContains("退出系统"));
+		
 		webtest.click("xpath=//a[contains(.,' 添加客户组')]");
 		webtest.type("id=field_name", "testcase1");
 		webtest.type("id=user_group_name", "测试用例客户组1");
@@ -178,6 +270,14 @@ public class Customer_Test extends BaseTest {
 	// =================================搜索充值记录(√)==========================================
 	@Test
 	public void search_Charge() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='客户余额']");
+		webtest.click("xpath=//a[contains(.,'充值记录')]");
+		
 		webtest.type("id=paycheck_start_time", "2018-11-27");
 		webtest.type("id=paycheck_end_time", "2018-12-04");
 		webtest.type("id=pay_state", "充值完成");
@@ -189,6 +289,14 @@ public class Customer_Test extends BaseTest {
 	// =================================删除充值记录(√)==========================================
 	@Test
 	public void delete_Charge() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='客户余额']");
+		webtest.click("xpath=//a[contains(.,'充值记录')]");
+		
 		try {
 			webtest.click("xpath=//table/tbody/tr[6]/td[8]/a[1]");
 			webtest.alertAccept();
@@ -201,6 +309,14 @@ public class Customer_Test extends BaseTest {
 	// =================================搜索余额记录(√)==========================================
 	@Test
 	public void search_Yue() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='客户余额']");
+		webtest.click("xpath=//a[contains(.,'余额记录')]");
+		
 		webtest.type("id=money_start_change_time", "2018-11-27");
 		webtest.type("id=money_end_change_time", "2018-12-04");
 		webtest.type("id=money_pay_type", "充值");
@@ -211,6 +327,14 @@ public class Customer_Test extends BaseTest {
 	// ================================编辑积分类型(√)==================================================
 	@Test
 	public void edit_Type() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
+		webtest.click("xpath=//a[contains(.,'积分类型')]");
+		
 		webtest.click("xpath=//table/tbody/tr[1]/td[4]/a[1]");
 		webtest.click("xpath=//input[@id='integral_currency_con']");
 		webtest.deleteContent("xpath=//input[@id='integral_currency_con']");
@@ -222,6 +346,14 @@ public class Customer_Test extends BaseTest {
 	// =================================编辑规则(√)========================================================
 	@Test
 	public void edit_Regular() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
+		webtest.click("xpath=//a[text()='积分规则']");
+		
 		webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[1]");
 		webtest.click("xpath=//div[contains(@class,'tabs-left')]/ul[1]/li[3]/a[1]");
 		webtest.click("id=shopping_amount");
@@ -233,6 +365,14 @@ public class Customer_Test extends BaseTest {
 	// =================================删除规则(√)========================================================
 	@Test
 	public void delete_Regular() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
+		webtest.click("xpath=//a[text()='积分规则']");
+		
 		try {
 			webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[2]");
 			webtest.alertAccept();
@@ -244,6 +384,14 @@ public class Customer_Test extends BaseTest {
 	// =================================新加规则(√)========================================================
 	@Test
 	public void add_Regular() throws Exception {
+		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.type("id=user_name", "admin");
+		webtest.type("id=user_passwd", "111111");
+		webtest.click("class=btn");
+		webtest.click("xpath=//a[text()='客户管理 ']");
+		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
+		webtest.click("xpath=//a[text()='积分规则']");
+		
 		webtest.click("xpath=//a[contains(.,' 添加新规则')]");
 		webtest.type("id=integral_rule_name", "测试用例1");
 		webtest.click("xpath=//div[contains(@class,'tabs-left')]/ul[1]/li[3]/a[1]");
