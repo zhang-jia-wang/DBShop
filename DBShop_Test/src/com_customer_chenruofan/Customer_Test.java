@@ -2,6 +2,7 @@ package com_customer_chenruofan;
 
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -72,17 +73,27 @@ public class Customer_Test extends BaseTest {
 	// =================================删除用户========================================================
 	@Test
 	public void delete_Customer() throws Exception {
-		webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[4]");
-		webtest.alertCancel();
+		try {
+			webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[4]");
+			webtest.alertCancel();
+		}catch(NoAlertPresentException e) {
+			System.out.println("NoAlertPresentException");
+		}
+
 	}
 
 	// =================================全选操作(模拟按键不生效)========================================================
 	@Test
 	public void select_All() throws Exception {
-		webtest.click("xpath=//input[@id='select_checkbox_state_1']");
-		webtest.type("id=allEdit", "删除客户");
-		webtest.click("xpath=//button[@onclick='return editAllUser();']");
-		webtest.alertCancel();
+		try {
+			webtest.click("xpath=//input[@id='select_checkbox_state_1']");
+			webtest.type("id=allEdit", "删除客户");
+			webtest.click("xpath=//button[@onclick='return editAllUser();']");
+			webtest.alertCancel();
+		}catch(NoAlertPresentException e) {
+			System.out.println("NoAlertPresentException");
+		}
+		
 	}
 
 	// =================================新加客户(√)========================================================
@@ -113,8 +124,13 @@ public class Customer_Test extends BaseTest {
 	// =================================删除客户扩展信息(√)========================================================
 	@Test
 	public void delete_ExtendManage() throws Exception {
-		webtest.click("xpath=//table/tbody/tr[1]/td[7]/a[2]");
-		webtest.alertAccept();
+		try {
+			webtest.click("xpath=//table/tbody/tr[1]/td[7]/a[2]");
+			webtest.alertAccept();
+		}catch(NoAlertPresentException e) {
+			System.out.println("NoAlertPresentException");
+		}
+		
 	}
 
 	// =================================新加客户扩展信息(√)========================================================
@@ -140,8 +156,13 @@ public class Customer_Test extends BaseTest {
 	// =================================删除客户组信息(√)========================================================
 	@Test
 	public void delete_CustomerGroup() throws Exception {
-		webtest.click("xpath=//table/tbody/tr[2]/td[5]/a[2]");
-		webtest.alertAccept();
+		try {
+			webtest.click("xpath=//table/tbody/tr[2]/td[5]/a[2]");
+			webtest.alertAccept();
+		}catch(NoAlertPresentException e) {
+			System.out.println("NoAlertPresentException");
+		}
+	
 	}
 
 	// =================================新加客户组信息(√)========================================================
@@ -169,8 +190,13 @@ public class Customer_Test extends BaseTest {
 	// =================================删除充值记录(√)==========================================
 	@Test
 	public void delete_Charge() throws Exception {
-		webtest.click("xpath=//table/tbody/tr[6]/td[8]/a[1]");
-		webtest.alertAccept();
+		try {
+			webtest.click("xpath=//table/tbody/tr[6]/td[8]/a[1]");
+			webtest.alertAccept();
+		}catch(NoAlertPresentException e) {
+			System.out.println("NoAlertPresentException");
+		}
+		
 	}
 
 	// =================================搜索余额记录(√)==========================================
@@ -208,8 +234,12 @@ public class Customer_Test extends BaseTest {
 	// =================================删除规则(√)========================================================
 	@Test
 	public void delete_Regular() throws Exception {
-		webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[2]");
-		webtest.alertAccept();
+		try {
+			webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[2]");
+			webtest.alertAccept();
+		}catch(NoAlertPresentException e) {
+			System.out.println("NoAlertPresentException");
+		}
 	}
 
 	// =================================新加规则(√)========================================================

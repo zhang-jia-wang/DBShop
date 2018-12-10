@@ -7,7 +7,7 @@ import com.webtest.core.BaseTest;
 public class Analysis_Test extends BaseTest{
 
 	@Test(priority=0)
-	public void testlogin() throws InterruptedException {
+	public void testlogin() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 //		webtest.click("xpath=//a[contains(.,'登录')]");
 		
@@ -17,7 +17,7 @@ public class Analysis_Test extends BaseTest{
 		Thread.sleep(5000);
 		}
 	@Test(priority=1)
-	public void test1() throws InterruptedException{
+	public void test1() throws Exception{
 		System.out.println("开始执行");
 		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
@@ -55,7 +55,7 @@ public class Analysis_Test extends BaseTest{
 		Thread.sleep(3000);
 	}
 	@Test(priority=2)
-	public void test2() throws InterruptedException {
+	public void test2() throws Exception {
 		//客户排行
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'客户排行')]");
@@ -94,7 +94,7 @@ public class Analysis_Test extends BaseTest{
 	}
 	
 	@Test(priority=3)
-	public void test3() throws InterruptedException {
+	public void test3() throws Exception {
 		//订单统计
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'订单统计')]");
@@ -131,7 +131,7 @@ public class Analysis_Test extends BaseTest{
 	}
 	
 	@Test(priority=4)
-	public void test4() throws InterruptedException {
+	public void test4() throws Exception {
 		//销售概括（订单走势图）
 		
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
@@ -203,7 +203,7 @@ public class Analysis_Test extends BaseTest{
 	}
 	
 	@Test(priority=5)
-	public void test5() throws InterruptedException {
+	public void test5() throws Exception {
 		//销售明细
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'销售明细')]");
@@ -239,7 +239,7 @@ public class Analysis_Test extends BaseTest{
 		Thread.sleep(3000);
 	}
 	@Test(priority=6)
-	public void test6() throws InterruptedException {
+	public void test6() throws Exception {
 		//销售排行
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'销售排行')]");
@@ -276,7 +276,7 @@ public class Analysis_Test extends BaseTest{
 	}
 	
 	@Test(priority=7)
-	public void test7() throws InterruptedException {
+	public void test7() throws Exception {
 		//分类销售分析
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'分类销售分析')]");

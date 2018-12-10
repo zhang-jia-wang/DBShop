@@ -23,4 +23,9 @@ public class NSDataProvider {
 				"FROM `mm_movie` ");
 	}
 	
+	@DataProvider(name="excel_add_customer")
+	public Object[][] excel_add_customer() throws IOException{
+		return new ExcelDataProvider().getTestDataByExcel("data/add_customer.xlsx","Sheet1");
+	}
+	
 }
