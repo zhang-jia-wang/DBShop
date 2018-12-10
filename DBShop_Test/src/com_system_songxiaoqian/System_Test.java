@@ -290,18 +290,24 @@ public class System_Test extends BaseTest {
 		// 4.对库存状态进行验证，添加库存状态(设置状态类型为有货状态)
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'状态设置')]");
-		Thread.sleep(3000);
-		System.out.println("abc");
 		webtest.click("xpath=//a[contains(.,'库存状态')]");
+		Thread.sleep(3000);
+		System.out.println("abc");	
 		webtest.click("xpath=//a[contains(.,' 添加库存状态')]");
 		webtest.click("xpath=//select[contains(@name,'state')]");
 		webtest.click("xpath=//option[contains(.,'有货状态')]");
 		webtest.type("name=stock_state_name", "有库存");
 		webtest.typeAndClear("xpath=//input[contains(@name,'state_sort')]", "300");
 		webtest.click("xpath=//button[contains(.,' 保存库存状态信息')]");
-		Thread.sleep(3000);
+	}
+	@Test
+	public void test20() throws Exception {
 		//编辑添加信息
-		System.out.println(webtest.getText("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'编辑')]"));
+		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'状态设置')]");
+		webtest.click("xpath=//a[contains(.,'库存状态')]");
+		Thread.sleep(3000);
+		System.out.println("abc");
 		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'编辑')]");
 		webtest.typeAndClear("xpath=//input[contains(@name,'stock_state_name')]", "有物品");
 		webtest.typeAndClear("xpath=//input[contains(@name,'state_sort')]", "400");
@@ -310,10 +316,11 @@ public class System_Test extends BaseTest {
 		//删除添加信息
 		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'删除')]");
 		webtest.alertAccept();
+		Thread.sleep(3000);
 		
 	}
 	@Test
-	public void test20() throws Exception {
+	public void test21() throws Exception {
 		// 5. 添加新管理员
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'管理员设置')]");
@@ -326,26 +333,28 @@ public class System_Test extends BaseTest {
 		webtest.type("name=admin_email", "admin11@126.com");
 		webtest.type("name=admin_password", "111111");
 		webtest.type("name=admin_password_con", "111111");
-		webtest.click("xpath=//button[@type='submit']");	
+		webtest.click("xpath=//button[@type='submit']");
+		Thread.sleep(4000);
+		
+		
 	}
 	@Test
-	public void test21() throws Exception {
+	public void test22() throws Exception {
+		// 编辑管理员
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'管理员设置')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/administrator']");
 		Thread.sleep(3000);
-		// 对编辑管理员进行验证
 		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'编辑')]");
-		webtest.typeAndClear("name=admin_email", "admin@163.com");
-		webtest.click("xpath=//button[@type='submit']");
+		webtest.typeAndClear("name=admin_email", "admin11@163.com");
+		webtest.click("xpath=//button[contains(.,' 保存管理员信息')]");
 		webtest.click("xpath=//a[contains(.,' 返回管理员列表')]");
-		Thread.sleep(3000);
 		// 删除管理员
 		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'删除')]");
 		webtest.alertAccept();
 	}
 	@Test
-	public void test22() throws Exception {
+	public void test23() throws Exception {
 		// 6.对管理员组进行验证
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'管理员设置')]");
@@ -362,7 +371,7 @@ public class System_Test extends BaseTest {
 	}
 
 	@Test
-	public void test23() throws Exception {
+	public void test24() throws Exception {
 		// 编辑管理员组
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'管理员设置')]");
@@ -379,7 +388,7 @@ public class System_Test extends BaseTest {
 		webtest.alertAccept();
 	}
 	@Test
-	public void test24() throws Exception {
+	public void test25() throws Exception {
 		//在线客服样式设置(个性样式-1)
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'在线客服设置')]");
@@ -393,7 +402,7 @@ public class System_Test extends BaseTest {
 	}
 	
 	@Test
-	public void test25() throws Exception {
+	public void test26() throws Exception {
 		//添加在线客服组
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'在线客服设置')]");
@@ -414,7 +423,7 @@ public class System_Test extends BaseTest {
 		Thread.sleep(3000);	
 	}
 	@Test
-	public void test26() throws Exception {
+	public void test27() throws Exception {
 		// 添加在线客服
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'在线客服设置')]");
@@ -433,7 +442,7 @@ public class System_Test extends BaseTest {
 
 	}
 	@Test
-	public void test27() throws Exception {
+	public void test28() throws Exception {
 		//编辑在线客服成员
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'在线客服设置')]");
@@ -451,7 +460,7 @@ public class System_Test extends BaseTest {
 		webtest.click("xpath=//button[@type='submit']");
 	}
 	@Test
-	public void test28() throws Exception {
+	public void test29() throws Exception {
 		//删除在线客服成员
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'在线客服设置')]");
@@ -459,7 +468,6 @@ public class System_Test extends BaseTest {
 		Thread.sleep(3000);
 		webtest.click("xpath=//table/tbody/tr[last()]/td[7]/a[contains(.,'删除')]");
 		webtest.alertAccept();
-		Thread.sleep(3000);
 		// 删除在线客服分组
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'在线客服设置')]");
@@ -470,5 +478,4 @@ public class System_Test extends BaseTest {
 		Thread.sleep(3000);
 		
 	}
-
 }
