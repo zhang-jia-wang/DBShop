@@ -12,7 +12,6 @@ import com.webtest.dataprovider.NSDataProvider;
 
 public class Customer_Test extends BaseTest {
 	// ================================= 登 录
-	// (√)=========================================================
 	@BeforeClass
 	public void login() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
@@ -61,7 +60,7 @@ public class Customer_Test extends BaseTest {
 		webtest.click("xpath=//button[contains(.,'提交充值')]");
 	}
 
-	// =================================积分调整========================================================
+	// =================================积分调整(√)========================================================
 	@Test
 	public void score_Adjust() throws Exception {
 		webtest.click("xpath=//table/tbody/tr[2]/td[10]/a[3]");
@@ -70,7 +69,7 @@ public class Customer_Test extends BaseTest {
 		webtest.click("xpath=//button[contains(.,'提交调整')]");
 	}
 
-	// =================================删除用户========================================================
+	// =================================删除用户(√)========================================================
 	@Test
 	public void delete_Customer() throws Exception {
 		try {
@@ -82,7 +81,7 @@ public class Customer_Test extends BaseTest {
 
 	}
 
-	// =================================全选操作(模拟按键不生效)========================================================
+	// =================================全选操作(√)========================================================
 	@Test
 	public void select_All() throws Exception {
 		try {

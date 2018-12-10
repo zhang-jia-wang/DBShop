@@ -37,7 +37,7 @@ public class CMS_Test extends BaseTest {
 		webtest.click("xpath=//button[contains(.,' 搜索')]");
 	}
 
-	// ===============================编辑文章()=======================================
+	// ===============================编辑文章(√)=======================================
 	@Test
 	public void Edit_Txt() throws Exception {
 		webtest.click("xpath=//table/tbody/tr[2]/td[7]/a[1]");
@@ -134,7 +134,7 @@ public class CMS_Test extends BaseTest {
 		webtest.click("xpath=//button[contains(.,' 保存分类')]");
 	}
 
-	// ===============================单页文章编辑()=============================================
+	// ===============================单页文章编辑(√)=============================================
 	@Test
 	public void Edit_Piece_Type() throws Exception {
 		webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[1]");
@@ -144,20 +144,20 @@ public class CMS_Test extends BaseTest {
 		webtest.click("xpath=//button[contains(.,' 保存单页文章信息')]");
 	}
 
-	// ===============================单页文章删除()=============================================
+	// ===============================单页文章删除(√)=============================================
 	@Test
 	public void Delete_Piece_Type() throws Exception {
 		webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[2]");
 		webtest.alertAccept();
 	}
 
-	// ===============================分类预览()=============================================
+	// ===============================分类预览(√)=============================================
 	@Test
 	public void View_Piece_Txt() throws Exception {
 		webtest.click("xpath=//table/tbody/tr[1]/td[5]/a[3]");
 	}
 
-	// ===============================添加单页文章()=============================================
+	// ===============================添加单页文章(√)=============================================
 	@Test
 	public void Add_Piece_Type() throws Exception {
 		webtest.click("xpath=//a[contains(.,' 添加单页文章')]");
