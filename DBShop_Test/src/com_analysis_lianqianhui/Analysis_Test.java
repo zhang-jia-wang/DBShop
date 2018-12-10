@@ -1,11 +1,16 @@
 package com_analysis_lianqianhui;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class Analysis_Test extends BaseTest{
-
+	@AfterClass
+	public void quit() {
+		webtest.quit();
+	}
+	
 	@Test(priority=0)
 	public void testlogin() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");

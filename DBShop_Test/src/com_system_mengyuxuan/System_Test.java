@@ -1,13 +1,14 @@
-package com.webtest.test;
+package com_system_mengyuxuan;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
-public class XiTongGuanLi1 extends BaseTest{
+public class System_Test extends BaseTest{
 	@BeforeClass
 	public void Login() throws Exception  {
 		webtest.open("http://localhost:8032/DBShop/admin");
@@ -16,7 +17,10 @@ public class XiTongGuanLi1 extends BaseTest{
 		webtest.click("xpath=//button[@type='submit']");
 		Thread.sleep(3000);
 	}
-		
+	@AfterClass
+	public void quit() {
+		webtest.quit();
+	}	
 	
 	
 	

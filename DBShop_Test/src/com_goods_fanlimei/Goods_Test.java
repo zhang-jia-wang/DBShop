@@ -5,6 +5,7 @@ package com_goods_fanlimei;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -25,7 +26,10 @@ public class Goods_Test extends BaseTest {
 		webtest.type("name=user_passwd", "111111");
 		webtest.click("xpath=//button[@type='submit']");		
 	}
-	
+	@AfterClass
+	public void quit() {
+		webtest.quit();
+	}
 
 	@Test(priority=1)
 	// ---------------------------管理商品（完成）-------------------------------
