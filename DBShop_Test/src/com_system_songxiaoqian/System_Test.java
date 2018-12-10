@@ -299,6 +299,7 @@ public class System_Test extends BaseTest {
 		webtest.type("name=stock_state_name", "有库存");
 		webtest.typeAndClear("xpath=//input[contains(@name,'state_sort')]", "300");
 		webtest.click("xpath=//button[contains(.,' 保存库存状态信息')]");
+		Thread.sleep(3000);
 		//编辑添加信息
 		System.out.println(webtest.getText("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'编辑')]"));
 		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'编辑')]");
@@ -466,6 +467,7 @@ public class System_Test extends BaseTest {
 		Thread.sleep(3000);
 		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'删除')]");
 		webtest.alertAccept();
+		Thread.sleep(3000);
 		
 	}
 
