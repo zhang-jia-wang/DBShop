@@ -10,15 +10,15 @@ import com.webtest.core.BaseTest;
 public class Rules_Test extends BaseTest{
 	@BeforeClass
 	//登录
-	public void login() throws InterruptedException {
+	public void login() throws Exception {
 	webtest.open("http://localhost:8032/DBShop/admin");
 	webtest.type("name=user_name","admin");
-	webtest.type("name=user_passwd","123456");
+	webtest.type("name=user_passwd","111111");
 	webtest.click("xpath=//button[@class='btn']");
 	}
 	
 //信息
-	public void information(String a,String b,String c) throws InterruptedException {
+	public void information(String a,String b,String c) throws Exception {
 	webtest.click("xpath=//a[contains(.,'运营管理 ')]");
 	webtest.click("xpath=//a[contains(.,'优惠促销规则')]");
 	webtest.click("xpath=//a[@class='btn btn-small btn-primary']");
@@ -31,7 +31,7 @@ public class Rules_Test extends BaseTest{
 	webtest.click(c);	
 	}
 	//促销规则
-	public void cu(String d) throws InterruptedException {
+	public void cu(String d) throws Exception {
 		webtest.click("xpath=//a[@href='#promotions_c']");	
 		webtest.type("xpath=//input[@class='span2']","100");
 		webtest.type("xpath=//input[@class='span1']","10");
@@ -39,31 +39,31 @@ public class Rules_Test extends BaseTest{
 		webtest.click(d);
 		}
 	//优惠客户组
-	public void group(String e,String f) throws InterruptedException {
+	public void group(String e,String f) throws Exception {
 	webtest.click("xpath=//a[@href='#promotions_b']");
 	webtest.click("xpath=//select[@id='promotions_user_type']");
 	webtest.click(e);
 	webtest.click(f);
 	}
 	//优惠商品
-			public void goods(String g,String h) throws InterruptedException {
+			public void goods(String g,String h) throws Exception {
 			webtest.click("xpath=//a[@href='#promotions_d']");
 			webtest.click("xpath=//select[@id='promotions_goods_type']");
 			webtest.click(g);
 			webtest.click(h);
 			}
 	//保存
-			public void save() throws InterruptedException {
+			public void save() throws Exception {
 			webtest.click("xpath=//button[@class='btn btn-small btn-primary']");
 			}
 	//删除
-			public void delete() throws InterruptedException {
+			public void delete() throws Exception {
 		     webtest.click("xpath=//table/tbody/tr[last()]/td[5]/a[contains(.,'删除')]");//找到最后一个删除，对应删除的行，对应的列，删除，都是/
 			 webtest.alertAccept();
 			 Thread.sleep(4000);
 			}
 	@Test	
-	public void test1() throws InterruptedException {		
+	public void test1() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'%')]");
 		group("xpath=//option[@value='all_user']","");
@@ -73,7 +73,7 @@ public class Rules_Test extends BaseTest{
 	
 }
 	@Test	
-	public void test2() throws InterruptedException {		
+	public void test2() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'关闭')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");
@@ -82,7 +82,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test3() throws InterruptedException {		
+	public void test3() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='user_group']","xpath=//label[contains(.,'普通会员')]");
@@ -91,7 +91,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test4() throws InterruptedException {		
+	public void test4() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");		
@@ -100,7 +100,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test5() throws InterruptedException {		
+	public void test5() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");		
@@ -109,7 +109,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test6() throws InterruptedException {		
+	public void test6() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");		
@@ -121,7 +121,7 @@ public class Rules_Test extends BaseTest{
 	
 	//优惠券的使用
 //基本信息
-	public void message(String g,String h) throws InterruptedException {
+	public void message(String g,String h) throws Exception {
 	webtest.click("xpath=//a[contains(.,'运营管理 ')]");
 	webtest.click("xpath=//a[@href='/DBShop/admin/goods/coupon']");
 	webtest.click("xpath=//a[@class='btn btn-small btn-primary']");
@@ -131,14 +131,14 @@ public class Rules_Test extends BaseTest{
 	webtest.click("xpath=//option[contains(.,'开启')]");	
 }
 //使用规则
-public void rule(String i,String j) throws InterruptedException {
+public void rule(String i,String j) throws Exception {
 	webtest.click("xpath=//a[contains(.,'优惠规则')]");
 	webtest.type("xpath=//input[@id='shopping_amount']",i);
 	webtest.type("xpath=//input[@class='span1']",j);
 	Thread.sleep(1000);
 }
 //获取规则
-public void getrule(String k,String l,String m) throws InterruptedException {
+public void getrule(String k,String l,String m) throws Exception {
 	webtest.click("xpath=//a[contains(.,'获取规则')]");
 	webtest.type("xpath=//input[@id='get_coupon_start_time']",k);
 	webtest.type("xpath=//input[@id='get_coupon_end_time']",l);
@@ -154,24 +154,24 @@ public void getrule(String k,String l,String m) throws InterruptedException {
 	Thread.sleep(2000);
 }
 //使用规则
-public void userule(String n,String o) throws InterruptedException {
+public void userule(String n,String o) throws Exception {
 	webtest.click("xpath=//a[@href='#coupon_d']");
 	webtest.type("xpath=//input[@id='coupon_start_time']",n);
 	webtest.type("xpath=//input[@id='coupon_end_time']",o);
 	webtest.click("xpath=//select[@id='coupon_goods_type']");
 }	
 //保存
-public void sav() throws InterruptedException {
+public void sav() throws Exception {
 	webtest.click("xpath=//button[@type='submit']");
 }
 //删除
-public void del() throws InterruptedException {
+public void del() throws Exception {
     webtest.click("xpath=//table/tbody/tr[last()-1]/td[10]/a[contains(.,'删除')]");//找到最后一个删除，对应删除的行，对应的列，删除，都是/
 	 webtest.alertAccept();
 	 Thread.sleep(4000);
 	}
 @Test
-public void test7() throws InterruptedException {
+public void test7() throws Exception {
 	message("毛衣","这个毛衣很暖的");
 	rule("100","10");
 	getrule("2018-12-9","2018-12-12","100");
@@ -180,7 +180,7 @@ public void test7() throws InterruptedException {
 	del();
 }
 @Test
-public void test8() throws InterruptedException {
+public void test8() throws Exception {
 	message("!!!!","这个毛衣很暖的");
 	rule("100","10");
 	getrule("2018-12-9","2018-12-12","100");
@@ -190,7 +190,7 @@ public void test8() throws InterruptedException {
 }
 
 @Test
-public void test9() throws InterruptedException {
+public void test9() throws Exception {
 	message("毛衣","这个毛衣很暖的");
 	rule("10","100");
 	getrule("2018-12-9","2018-12-12","100");
@@ -199,7 +199,7 @@ public void test9() throws InterruptedException {
 	del();
 }
 @Test
-public void test10() throws InterruptedException {
+public void test10() throws Exception {
 	message("毛衣","");
 	rule("100","10");
 	getrule("2018-12-9","2018-12-12","100");
@@ -208,7 +208,7 @@ public void test10() throws InterruptedException {
 	del();
 }
 @Test
-public void test11() throws InterruptedException {
+public void test11() throws Exception {
 	message("毛衣","");
 	rule("100","10");
 	getrule("2018-12-12","2018-12-9","100");
@@ -218,7 +218,7 @@ public void test11() throws InterruptedException {
 }
 
 @Test
-public void test12() throws InterruptedException {
+public void test12() throws Exception {
 	message("毛衣","这个毛衣很暖的");
 	rule("100","10");
 	getrule("","2018-12-12","100");
@@ -230,14 +230,14 @@ public void test12() throws InterruptedException {
 
 //专题设置
 //点击按钮操作
-public void click() throws InterruptedException {
+public void click() throws Exception {
 	webtest.click("xpath=//a[contains(.,'运营管理 ')]");
 	webtest.mouseoverElement("xpath=//a[contains(.,'专题管理')]");
 	webtest.click("xpath=//a[contains(.,'专题设置')]");
 	webtest.click("xpath=//i[@class='icon-plus icon-white']");
 }
 //信息
-public void inf(String a,String b) throws InterruptedException {
+public void inf(String a,String b) throws Exception {
 	webtest.type("xpath=//input[@class='span10']",a);
 	webtest.type("xpath=//input[@class='span5']",b);
 	webtest.click("xpath=//select[@class='span4']");
@@ -247,24 +247,24 @@ public void inf(String a,String b) throws InterruptedException {
 	webtest.click("xpath=//option[@value='1']");
 }
 //搜索引擎
-public void search(String c,String d,String e) throws InterruptedException {
+public void search(String c,String d,String e) throws Exception {
 	webtest.click("xpath=//a[@href='#theme_c']");
 	webtest.type("xpath=//input[@class='span12']",c);
 	webtest.type("xpath=//textarea[@id='theme_keywords']",d);
 	webtest.type("xpath=//textarea[@id='theme_description']",e);
 }
 //保存
-public void sa() throws InterruptedException {
+public void sa() throws Exception {
 	webtest.click("xpath=//button[@type='submit']");
 }
 //删除
-public void de() throws InterruptedException {
+public void de() throws Exception {
 	    webtest.click("xpath=//table/tbody/tr[last()-1]/td[7]/a[contains(.,'删除')]");//找到最后一个删除，对应删除的行，对应的列，删除，都是/
 		 webtest.alertAccept();
 		 Thread.sleep(4000);		
 }
 @Test
-public void test13() throws InterruptedException {
+public void test13() throws Exception {
 	click();
 	inf("双1212","促销活动");
 	search("优惠","打折","双12疯狂来袭");
@@ -272,7 +272,7 @@ public void test13() throws InterruptedException {
 	de();
 }
 @Test
-public void test14() throws InterruptedException {
+public void test14() throws Exception {
 	click();
 	inf("!!!!!!","促销");
 	search("优惠","打折","双12疯狂来袭");
