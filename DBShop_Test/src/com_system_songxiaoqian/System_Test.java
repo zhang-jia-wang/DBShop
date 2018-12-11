@@ -19,62 +19,62 @@ public class System_Test extends BaseTest {
 
 	@Test
 	public void test01() throws Exception {
-		// 1.å¯¹æ‰‹æœºçŸ­ä¿¡æé†’è®¾ç½®è¿›è¡ŒéªŒè¯ï¼Œè®¾ç½®ç±»å‹ä¸ºâ€œæ— ç±»å‹â€
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'æ‰‹æœºçŸ­ä¿¡æé†’è®¾ç½®')]");
+		// 1.¶ÔÊÖ»ú¶ÌĞÅÌáĞÑÉèÖÃ½øĞĞÑéÖ¤£¬ÉèÖÃÀàĞÍÎª¡°ÎŞÀàĞÍ¡±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÊÖ»ú¶ÌĞÅÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("name=phone_sms_type");
-		webtest.mouseoverElement("xpath=//option[contains(.,'æ— ç±»å‹')]");
-		webtest.click("xpath=//option[contains(.,'æ— ç±»å‹')]");
-		webtest.click("xpath=//button[contains(.,' ä¿å­˜æé†’è®¾ç½®')]");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		webtest.mouseoverElement("xpath=//option[contains(.,'ÎŞÀàĞÍ')]");
+		webtest.click("xpath=//option[contains(.,'ÎŞÀàĞÍ')]");
+		webtest.click("xpath=//button[contains(.,' ±£´æÌáĞÑÉèÖÃ')]");
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test02() throws Exception {
-		// è®¾ç½®ç±»å‹ä¸ºâ€œé˜¿é‡Œå¤§äºçŸ­ä¿¡â€
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'æ‰‹æœºçŸ­ä¿¡æé†’è®¾ç½®')]");
+		// ÉèÖÃÀàĞÍÎª¡°°¢Àï´óÓÚ¶ÌĞÅ¡±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÊÖ»ú¶ÌĞÅÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("name=phone_sms_type");
-		webtest.mouseoverElement("xpath=//option[contains(.,'é˜¿é‡Œå¤§äºçŸ­ä¿¡')]");
-		webtest.click("xpath=//option[contains(.,'é˜¿é‡Œå¤§äºçŸ­ä¿¡')]");
-		webtest.click("xpath=//button[contains(.,' ä¿å­˜æé†’è®¾ç½®')]");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		webtest.mouseoverElement("xpath=//option[contains(.,'°¢Àï´óÓÚ¶ÌĞÅ')]");
+		webtest.click("xpath=//option[contains(.,'°¢Àï´óÓÚ¶ÌĞÅ')]");
+		webtest.click("xpath=//button[contains(.,' ±£´æÌáĞÑÉèÖÃ')]");
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test03() throws Exception {
-		// è®¾ç½®ç±»å‹ä¸ºâ€œé˜¿é‡Œäº‘çŸ­ä¿¡(æ¶ˆæ¯æœåŠ¡)â€
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'æ‰‹æœºçŸ­ä¿¡æé†’è®¾ç½®')]");
+		// ÉèÖÃÀàĞÍÎª¡°°¢ÀïÔÆ¶ÌĞÅ(ÏûÏ¢·şÎñ)¡±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÊÖ»ú¶ÌĞÅÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("name=phone_sms_type");
-		webtest.mouseoverElement("xpath=//option[contains(.,'é˜¿é‡Œäº‘çŸ­ä¿¡(æ¶ˆæ¯æœåŠ¡)')]");
-		webtest.click("xpath=//option[contains(.,'é˜¿é‡Œäº‘çŸ­ä¿¡(æ¶ˆæ¯æœåŠ¡)')]");
-		webtest.click("xpath=//button[contains(.,' ä¿å­˜æé†’è®¾ç½®')]");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		webtest.mouseoverElement("xpath=//option[contains(.,'°¢ÀïÔÆ¶ÌĞÅ(ÏûÏ¢·şÎñ)')]");
+		webtest.click("xpath=//option[contains(.,'°¢ÀïÔÆ¶ÌĞÅ(ÏûÏ¢·şÎñ)')]");
+		webtest.click("xpath=//button[contains(.,' ±£´æÌáĞÑÉèÖÃ')]");
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test04() throws Exception {
-		// è®¾ç½®ç±»å‹ä¸ºâ€œé˜¿é‡Œäº‘çŸ­ä¿¡(äº‘é€šä¿¡)â€
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'æ‰‹æœºçŸ­ä¿¡æé†’è®¾ç½®')]");
+		// ÉèÖÃÀàĞÍÎª¡°°¢ÀïÔÆ¶ÌĞÅ(ÔÆÍ¨ĞÅ)¡±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÊÖ»ú¶ÌĞÅÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("name=phone_sms_type");
-		webtest.mouseoverElement("xpath=//option[contains(.,'é˜¿é‡Œäº‘çŸ­ä¿¡(äº‘é€šä¿¡)')]");
-		webtest.click("xpath=//option[contains(.,'é˜¿é‡Œäº‘çŸ­ä¿¡(äº‘é€šä¿¡)')]");
-		webtest.click("xpath=//button[contains(.,' ä¿å­˜æé†’è®¾ç½®')]");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		webtest.mouseoverElement("xpath=//option[contains(.,'°¢ÀïÔÆ¶ÌĞÅ(ÔÆÍ¨ĞÅ)')]");
+		webtest.click("xpath=//option[contains(.,'°¢ÀïÔÆ¶ÌĞÅ(ÔÆÍ¨ĞÅ)')]");
+		webtest.click("xpath=//button[contains(.,' ±£´æÌáĞÑÉèÖÃ')]");
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 		
 	}
 
@@ -82,204 +82,204 @@ public class System_Test extends BaseTest {
 
 	@Test
 	public void test05() throws Exception {
-		// éªŒè¯åŸºæœ¬ä¿¡æ¯
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ÑéÖ¤»ù±¾ĞÅÏ¢
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.typeAndClear("name=admin_receive_email", "admin@qq.com");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test06() throws Exception {
-		// æäº¤è®¢å•
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// Ìá½»¶©µ¥
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'æäº¤è®¢å•')]");
+		webtest.click("xpath=//a[contains(.,'Ìá½»¶©µ¥')]");
 		webtest.click("xpath=//input[@name='submit_order_state']");
 		webtest.click("xpath=//input[contains(@name,'buyer_submit_order_state')]");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test07() throws Exception {
-		// ä»˜æ¬¾å®Œæˆ
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ¸¶¿îÍê³É
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'ä»˜æ¬¾å®Œæˆ')]");
+		webtest.click("xpath=//a[contains(.,'¸¶¿îÍê³É')]");
 		webtest.click("xpath=//input[@name='payment_finish_state']");
 		webtest.click("xpath=//input[@name='buyer_payment_finish_state']");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test08() throws Exception {
-		// å‘è´§å®Œæˆ
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ·¢»õÍê³É
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'å‘è´§å®Œæˆ')]");
+		webtest.click("xpath=//a[contains(.,'·¢»õÍê³É')]");
 		webtest.click("xpath=//input[@name='ship_finish_state']");
 		webtest.click("xpath=//input[contains(@name,'buyer_ship_finish_state')]");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test09() throws Exception {
-		// äº¤æ˜“å®Œæˆ
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ½»Ò×Íê³É
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'äº¤æ˜“å®Œæˆ')]");
+		webtest.click("xpath=//a[contains(.,'½»Ò×Íê³É')]");
 		webtest.click("xpath=//input[@name='transaction_finish_state']");
 		webtest.click("xpath=//input[@name='buyer_transaction_finish_state']");
 		webtest.click("xpath=//button[contains(@type,'submit')]");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test10() throws Exception {
-		// å–æ¶ˆè®¢å•
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// È¡Ïû¶©µ¥
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'å–æ¶ˆè®¢å•')]");
+		webtest.click("xpath=//a[contains(.,'È¡Ïû¶©µ¥')]");
 		webtest.click("xpath=//input[@name='cancel_order_state']");
 		webtest.click("xpath=//input[contains(@name,'buyer_cancel_order_state')]");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test11() throws Exception {
-		// å•†å“å’¨è¯¢
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ÉÌÆ·×ÉÑ¯
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("xpath=//a[@href='#system_g']");
 		webtest.click("xpath=//input[@name='goods_ask_state']");
 		webtest.click("xpath=//input[@name='buyer_goods_ask_state']");
 		webtest.click("xpath=//button[contains(@type,'submit')]");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test12() throws Exception {
-		// å’¨è¯¢å›å¤
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ×ÉÑ¯»Ø¸´
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'å’¨è¯¢å›å¤')]");
+		webtest.click("xpath=//a[contains(.,'×ÉÑ¯»Ø¸´')]");
 		webtest.click("xpath=//input[@name='goods_ask_reply_state']");
 		webtest.click("xpath=//input[@name='buyer_goods_ask_reply_state']");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test13() throws Exception {
-		// å•†å“ç¼ºè´§
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
+		// ÉÌÆ·È±»õ
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'å•†å“ç¼ºè´§')]");
+		webtest.click("xpath=//a[contains(.,'ÉÌÆ·È±»õ')]");
 		webtest.click("xpath=//input[@name='goods_stock_out_state']");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test14() throws Exception {
-		// è™šæ‹Ÿå•†å“å‘è´§
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'æ¶ˆæ¯æé†’è®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'ç”µå­é‚®ä»¶æé†’è®¾ç½®')]");
+		// ĞéÄâÉÌÆ··¢»õ
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÏûÏ¢ÌáĞÑÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'µç×ÓÓÊ¼şÌáĞÑÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'è™šæ‹Ÿå•†å“å‘è´§')]");
+		webtest.click("xpath=//a[contains(.,'ĞéÄâÉÌÆ··¢»õ')]");
 		webtest.click("xpath=//input[@name='virtual_goods_send_state']");
 		webtest.click("xpath=//input[@name='buyer_virtual_goods_send_state']");
 		webtest.click("xpath=//button[@type='submit']");
-		assertTrue(webtest.ifContains("ä¿å­˜æˆåŠŸ"));
+		assertTrue(webtest.ifContains("±£´æ³É¹¦"));
 	}
 
 	@Test
 	public void test15() throws Exception {
-		// æ·»åŠ åœ°åŒº
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.click("xpath=//a[contains(.,'åœ°åŒºç®¡ç†')]");
+		// Ìí¼ÓµØÇø
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.click("xpath=//a[contains(.,'µØÇø¹ÜÀí')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,' æ·»åŠ åœ°åŒº')]");
-		webtest.type("name=region_name", "çŸ¿åŒº");
-		webtest.click("xpath=//button[contains(.,'ä¿å­˜')]");
+		webtest.click("xpath=//a[contains(.,' Ìí¼ÓµØÇø')]");
+		webtest.type("name=region_name", "¿óÇø");
+		webtest.click("xpath=//button[contains(.,'±£´æ')]");
 		
 	}
 
 	@Test
 	public void test16() throws Exception {
-		// æŸ¥çœ‹ä¸‹çº§å¹¶è¿”å›é¡¶çº§
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.click("xpath=//a[contains(.,'åœ°åŒºç®¡ç†')]");
+		// ²é¿´ÏÂ¼¶²¢·µ»Ø¶¥¼¶
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.click("xpath=//a[contains(.,'µØÇø¹ÜÀí')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("xpath=//a[@href='/DBShop/admin/region/index/top_id/1']");
-		webtest.click("xpath=//a[contains(.,' è¿”å›é¡¶çº§')]");
+		webtest.click("xpath=//a[contains(.,' ·µ»Ø¶¥¼¶')]");
 		
 	}
 
 	@Test
 	public void test17() throws Exception {
-		// æŸ¥çœ‹ä¸‹çº§è¿”å›ä¸Šä¸€çº§
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.click("xpath=//a[contains(.,'åœ°åŒºç®¡ç†')]");
+		// ²é¿´ÏÂ¼¶·µ»ØÉÏÒ»¼¶
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.click("xpath=//a[contains(.,'µØÇø¹ÜÀí')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("xpath=//a[@href='/DBShop/admin/region/index/top_id/1']");
-		webtest.click("xpath=//a[contains(.,' è¿”å›ä¸Šä¸€çº§')]");
+		webtest.click("xpath=//a[contains(.,' ·µ»ØÉÏÒ»¼¶')]");
 		
 	}
 
 	@Test
 	public void test18() throws Exception {
-		// ç¼–è¾‘åœ°åŒº
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.click("xpath=//a[contains(.,'åœ°åŒºç®¡ç†')]");
+		// ±à¼­µØÇø
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.click("xpath=//a[contains(.,'µØÇø¹ÜÀí')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
 		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/span");
-		webtest.typeAndClear("xpath=//input[@value='çŸ¿åŒº']", "BB");
-		webtest.click("xpath=//button[contains(.,' ä¿å­˜')]");
-		// åˆ é™¤åœ°åŒº
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.click("xpath=//a[contains(.,'åœ°åŒºç®¡ç†')]");
+		webtest.typeAndClear("xpath=//input[@value='¿óÇø']", "BB");
+		webtest.click("xpath=//button[contains(.,' ±£´æ')]");
+		// É¾³ıµØÇø
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.click("xpath=//a[contains(.,'µØÇø¹ÜÀí')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'åˆ é™¤')]");
+		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'É¾³ı')]");
 		webtest.alertAccept();
 	}
 
@@ -287,38 +287,38 @@ public class System_Test extends BaseTest {
 
 	@Test
 	public void test19() throws Exception {
-		// 4.å¯¹åº“å­˜çŠ¶æ€è¿›è¡ŒéªŒè¯ï¼Œæ·»åŠ åº“å­˜çŠ¶æ€(è®¾ç½®çŠ¶æ€ç±»å‹ä¸ºæœ‰è´§çŠ¶æ€)
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'çŠ¶æ€è®¾ç½®')]");
+		// 4.¶Ô¿â´æ×´Ì¬½øĞĞÑéÖ¤£¬Ìí¼Ó¿â´æ×´Ì¬(ÉèÖÃ×´Ì¬ÀàĞÍÎªÓĞ»õ×´Ì¬)
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'×´Ì¬ÉèÖÃ')]");
 		Thread.sleep(3000);
 		System.out.println("abc");
-		webtest.click("xpath=//a[contains(.,'åº“å­˜çŠ¶æ€')]");
-		webtest.click("xpath=//a[contains(.,' æ·»åŠ åº“å­˜çŠ¶æ€')]");
+		webtest.click("xpath=//a[contains(.,'¿â´æ×´Ì¬')]");
+		webtest.click("xpath=//a[contains(.,' Ìí¼Ó¿â´æ×´Ì¬')]");
 		webtest.click("xpath=//select[contains(@name,'state')]");
-		webtest.click("xpath=//option[contains(.,'æœ‰è´§çŠ¶æ€')]");
-		webtest.type("name=stock_state_name", "æœ‰åº“å­˜");
+		webtest.click("xpath=//option[contains(.,'ÓĞ»õ×´Ì¬')]");
+		webtest.type("name=stock_state_name", "ÓĞ¿â´æ");
 		webtest.typeAndClear("xpath=//input[contains(@name,'state_sort')]", "300");
-		webtest.click("xpath=//button[contains(.,' ä¿å­˜åº“å­˜çŠ¶æ€ä¿¡æ¯')]");
-		//ç¼–è¾‘æ·»åŠ ä¿¡æ¯
-		System.out.println(webtest.getText("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'ç¼–è¾‘')]"));
-		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'ç¼–è¾‘')]");
-		webtest.typeAndClear("xpath=//input[contains(@name,'stock_state_name')]", "æœ‰ç‰©å“");
+		webtest.click("xpath=//button[contains(.,' ±£´æ¿â´æ×´Ì¬ĞÅÏ¢')]");
+		//±à¼­Ìí¼ÓĞÅÏ¢
+		System.out.println(webtest.getText("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'±à¼­')]"));
+		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'±à¼­')]");
+		webtest.typeAndClear("xpath=//input[contains(@name,'stock_state_name')]", "ÓĞÎïÆ·");
 		webtest.typeAndClear("xpath=//input[contains(@name,'state_sort')]", "400");
 		webtest.click("xpath=//button[@type='submit']");
 		Thread.sleep(3000);
-		//åˆ é™¤æ·»åŠ ä¿¡æ¯
-		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'åˆ é™¤')]");
+		//É¾³ıÌí¼ÓĞÅÏ¢
+		webtest.click("xpath=//table/tbody/tr[last()-1]/td[5]/a[contains(.,'É¾³ı')]");
 		webtest.alertAccept();
 		
 	}
 	@Test
 	public void test20() throws Exception {
-		// 5. æ·»åŠ æ–°ç®¡ç†å‘˜
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'ç®¡ç†å‘˜è®¾ç½®')]");
+		// 5. Ìí¼ÓĞÂ¹ÜÀíÔ±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'¹ÜÀíÔ±ÉèÖÃ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/administrator']");
 		Thread.sleep(3000);
-		webtest.click("xpath=//a[contains(.,' æ·»åŠ æ–°ç®¡ç†å‘˜')]");
+		webtest.click("xpath=//a[contains(.,' Ìí¼ÓĞÂ¹ÜÀíÔ±')]");
 		webtest.click("xpath=//select[contains(@name,'admin_group_id')]");
 		webtest.click("xpath=//option[contains(@value,'1')]");
 		webtest.type("name=admin_name", "admin11");
@@ -329,32 +329,32 @@ public class System_Test extends BaseTest {
 	}
 	@Test
 	public void test21() throws Exception {
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'ç®¡ç†å‘˜è®¾ç½®')]");
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'¹ÜÀíÔ±ÉèÖÃ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/administrator']");
 		Thread.sleep(3000);
-		// å¯¹ç¼–è¾‘ç®¡ç†å‘˜è¿›è¡ŒéªŒè¯
-		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'ç¼–è¾‘')]");
+		// ¶Ô±à¼­¹ÜÀíÔ±½øĞĞÑéÖ¤
+		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'±à¼­')]");
 		webtest.typeAndClear("name=admin_email", "admin@163.com");
 		webtest.click("xpath=//button[@type='submit']");
-		webtest.click("xpath=//a[contains(.,' è¿”å›ç®¡ç†å‘˜åˆ—è¡¨')]");
+		webtest.click("xpath=//a[contains(.,' ·µ»Ø¹ÜÀíÔ±ÁĞ±í')]");
 		Thread.sleep(3000);
-		// åˆ é™¤ç®¡ç†å‘˜
-		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'åˆ é™¤')]");
+		// É¾³ı¹ÜÀíÔ±
+		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'É¾³ı')]");
 		webtest.alertAccept();
 	}
 	@Test
 	public void test22() throws Exception {
-		// 6.å¯¹ç®¡ç†å‘˜ç»„è¿›è¡ŒéªŒè¯
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'ç®¡ç†å‘˜è®¾ç½®')]");
+		// 6.¶Ô¹ÜÀíÔ±×é½øĞĞÑéÖ¤
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'¹ÜÀíÔ±ÉèÖÃ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/admingroup']");
 		Thread.sleep(3000);
-		// æ·»åŠ ç®¡ç†å‘˜ç»„åŸºæœ¬ä¿¡æ¯å’Œæƒé™è®¾ç½®(ç³»ç»Ÿç®¡ç†å’Œç®¡ç†å‘˜ç®¡ç†)
-		webtest.click("xpath=//a[contains(.,'åŸºæœ¬ä¿¡æ¯')]");
-		webtest.click("xpath=//a[contains(.,' æ·»åŠ ç®¡ç†å‘˜ç»„')]");
-		webtest.type("name=admin_group_name", "ç®¡ç†å‘˜ç»„5");
-		webtest.click("xpath=//a[contains(.,'æƒé™è®¾ç½®')]");
+		// Ìí¼Ó¹ÜÀíÔ±×é»ù±¾ĞÅÏ¢ºÍÈ¨ÏŞÉèÖÃ(ÏµÍ³¹ÜÀíºÍ¹ÜÀíÔ±¹ÜÀí)
+		webtest.click("xpath=//a[contains(.,'»ù±¾ĞÅÏ¢')]");
+		webtest.click("xpath=//a[contains(.,' Ìí¼Ó¹ÜÀíÔ±×é')]");
+		webtest.type("name=admin_group_name", "¹ÜÀíÔ±×é5");
+		webtest.click("xpath=//a[contains(.,'È¨ÏŞÉèÖÃ')]");
 		webtest.click("xpath=//input[contains(@id,'System')]");
 		webtest.click("xpath=//input[contains(@id,'Admin')]");
 		webtest.click("xpath=//button[@type='submit']");	
@@ -362,51 +362,51 @@ public class System_Test extends BaseTest {
 
 	@Test
 	public void test23() throws Exception {
-		// ç¼–è¾‘ç®¡ç†å‘˜ç»„
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'ç®¡ç†å‘˜è®¾ç½®')]");
+		// ±à¼­¹ÜÀíÔ±×é
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'¹ÜÀíÔ±ÉèÖÃ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/admingroup']");		
 		Thread.sleep(3000);
-		webtest.click("xpath=//table/tbody/tr[last()]/td[3]/a[contains(.,'ç¼–è¾‘')]");
+		webtest.click("xpath=//table/tbody/tr[last()]/td[3]/a[contains(.,'±à¼­')]");
 		webtest.typeAndClear("name=admin_group_name", "admin");
-		webtest.click("xpath=//a[contains(.,'æƒé™è®¾ç½®')]");
+		webtest.click("xpath=//a[contains(.,'È¨ÏŞÉèÖÃ')]");
 		webtest.click("xpath=//input[@id='System']");
 		webtest.click("xpath=//input[@id='Admin']");
 		webtest.click("xpath=//button[@type='submit']");
-		// åˆ é™¤ç®¡ç†å‘˜ç»„	
-		webtest.click("xpath=//table/tbody/tr[last()]/td[3]/a[contains(.,'åˆ é™¤')]");
+		// É¾³ı¹ÜÀíÔ±×é	
+		webtest.click("xpath=//table/tbody/tr[last()]/td[3]/a[contains(.,'É¾³ı')]");
 		webtest.alertAccept();
 	}
 	@Test
 	public void test24() throws Exception {
-		//åœ¨çº¿å®¢æœæ ·å¼è®¾ç½®(ä¸ªæ€§æ ·å¼-1)
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'åœ¨çº¿å®¢æœè®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'å®¢æœæ ·å¼è®¾ç½®')]");
+		//ÔÚÏß¿Í·şÑùÊ½ÉèÖÃ(¸öĞÔÑùÊ½-1)
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÔÚÏß¿Í·şÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'¿Í·şÑùÊ½ÉèÖÃ')]");
 		Thread.sleep(3000);
 		webtest.click("name=online_style");
-		webtest.mouseoverElement("xpath=//option[contains(.,'ä¸ªæ€§æ ·å¼-1')]");
-		webtest.click("xpath=//option[contains(.,'ä¸ªæ€§æ ·å¼-1')]");
+		webtest.mouseoverElement("xpath=//option[contains(.,'¸öĞÔÑùÊ½-1')]");
+		webtest.click("xpath=//option[contains(.,'¸öĞÔÑùÊ½-1')]");
 		webtest.click("xpath=//button[@type='submit']");
 
 	}
 	
 	@Test
 	public void test25() throws Exception {
-		//æ·»åŠ åœ¨çº¿å®¢æœç»„
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'åœ¨çº¿å®¢æœè®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'åœ¨çº¿å®¢æœåˆ†ç»„')]");
+		//Ìí¼ÓÔÚÏß¿Í·ş×é
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÔÚÏß¿Í·şÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÔÚÏß¿Í·ş·Ö×é')]");
 		Thread.sleep(3000);
-		webtest.click("xpath=//a[contains(.,' æ·»åŠ åœ¨çº¿å®¢æœç»„')]");
-		webtest.typeAndClear("name=online_group_name","å•†å®¶");
+		webtest.click("xpath=//a[contains(.,' Ìí¼ÓÔÚÏß¿Í·ş×é')]");
+		webtest.typeAndClear("name=online_group_name","ÉÌ¼Ò");
 		webtest.typeAndClear("name=online_group_sort","200");
 		webtest.click("xpath=//input[@value='1']");
 		webtest.click("xpath=//button[@type='submit']");
 		Thread.sleep(3000);
-		//ç¼–è¾‘åœ¨çº¿å®¢æœç»„
-		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'ç¼–è¾‘')]");
-		webtest.typeAndClear("name=online_group_name","åº—å®¶");
+		//±à¼­ÔÚÏß¿Í·ş×é
+		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'±à¼­')]");
+		webtest.typeAndClear("name=online_group_name","µê¼Ò");
 		webtest.typeAndClear("name=online_group_sort","255");
 		webtest.click("xpath=//input[@value='0']");
 		webtest.click("xpath=//button[@type='submit']");
@@ -414,15 +414,15 @@ public class System_Test extends BaseTest {
 	}
 	@Test
 	public void test26() throws Exception {
-		// æ·»åŠ åœ¨çº¿å®¢æœ
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'åœ¨çº¿å®¢æœè®¾ç½®')]");
+		// Ìí¼ÓÔÚÏß¿Í·ş
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÔÚÏß¿Í·şÉèÖÃ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/online']");
 		Thread.sleep(3000);
-		webtest.click("xpath=//a[contains(.,' æ·»åŠ åœ¨çº¿å®¢æœ')]");
-		webtest.typeAndClear("name=online_name", "å®¢æœä¸€");
+		webtest.click("xpath=//a[contains(.,' Ìí¼ÓÔÚÏß¿Í·ş')]");
+		webtest.typeAndClear("name=online_name", "¿Í·şÒ»");
 		webtest.click("name=online_group_id");
-		webtest.click("xpath=//option[contains(.,'åº—å®¶')]");
+		webtest.click("xpath=//option[contains(.,'µê¼Ò')]");
 		webtest.click("name=online_type");
 		webtest.click("xpath=//option[@value='skype']");
 		webtest.typeAndClear("name=online_account", "admin@admin.com");
@@ -433,15 +433,15 @@ public class System_Test extends BaseTest {
 	}
 	@Test
 	public void test27() throws Exception {
-		//ç¼–è¾‘åœ¨çº¿å®¢æœæˆå‘˜
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'åœ¨çº¿å®¢æœè®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'åœ¨çº¿å®¢æœæˆå‘˜')]");
+		//±à¼­ÔÚÏß¿Í·ş³ÉÔ±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÔÚÏß¿Í·şÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÔÚÏß¿Í·ş³ÉÔ±')]");
 		Thread.sleep(3000);
-		webtest.click("xpath=//table/tbody/tr[last()]/td[7]/a[contains(.,'ç¼–è¾‘')]");
-		webtest.typeAndClear("name=online_name", "å®¢æœ");
+		webtest.click("xpath=//table/tbody/tr[last()]/td[7]/a[contains(.,'±à¼­')]");
+		webtest.typeAndClear("name=online_name", "¿Í·ş");
 		webtest.click("name=online_group_id");
-		webtest.click("xpath=//option[contains(.,'åº—å®¶')]");
+		webtest.click("xpath=//option[contains(.,'µê¼Ò')]");
 		webtest.click("name=online_type");
 		webtest.click("xpath=//option[@value='qq']");
 		webtest.typeAndClear("name=online_account", "admin@qq.com");
@@ -451,20 +451,20 @@ public class System_Test extends BaseTest {
 	}
 	@Test
 	public void test28() throws Exception {
-		//åˆ é™¤åœ¨çº¿å®¢æœæˆå‘˜
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'åœ¨çº¿å®¢æœè®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'åœ¨çº¿å®¢æœæˆå‘˜')]");
+		//É¾³ıÔÚÏß¿Í·ş³ÉÔ±
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÔÚÏß¿Í·şÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÔÚÏß¿Í·ş³ÉÔ±')]");
 		Thread.sleep(3000);
-		webtest.click("xpath=//table/tbody/tr[last()]/td[7]/a[contains(.,'åˆ é™¤')]");
+		webtest.click("xpath=//table/tbody/tr[last()]/td[7]/a[contains(.,'É¾³ı')]");
 		webtest.alertAccept();
 		Thread.sleep(3000);
-		// åˆ é™¤åœ¨çº¿å®¢æœåˆ†ç»„
-		webtest.click("xpath=//a[contains(.,'ç³»ç»Ÿç®¡ç† ')]");
-		webtest.mouseoverElement("xpath=//a[contains(.,'åœ¨çº¿å®¢æœè®¾ç½®')]");
-		webtest.click("xpath=//a[contains(.,'åœ¨çº¿å®¢æœåˆ†ç»„')]");
+		// É¾³ıÔÚÏß¿Í·ş·Ö×é
+		webtest.click("xpath=//a[contains(.,'ÏµÍ³¹ÜÀí ')]");
+		webtest.mouseoverElement("xpath=//a[contains(.,'ÔÚÏß¿Í·şÉèÖÃ')]");
+		webtest.click("xpath=//a[contains(.,'ÔÚÏß¿Í·ş·Ö×é')]");
 		Thread.sleep(3000);
-		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'åˆ é™¤')]");
+		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'É¾³ı')]");
 		webtest.alertAccept();
 		
 	}
