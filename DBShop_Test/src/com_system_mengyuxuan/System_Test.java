@@ -11,7 +11,7 @@ import com.webtest.core.BaseTest;
 public class System_Test extends BaseTest{
 	@BeforeClass
 	public void Login() throws Exception  {
-		webtest.open("http://localhost:8032/DBShop/admin");
+		webtest.open("http://10.7.1.9:8686/DBShop/admin");
 		webtest.type("name=user_name", "admin");
 		webtest.type("name=user_passwd", "111111");
 		webtest.click("xpath=//button[@type='submit']");
