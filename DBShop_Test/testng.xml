@@ -10,6 +10,7 @@
 			<class name="com_CMS_chenruofan.CMS_Test" />
 			<class name="com_customer_chenruofan.Customer_Test" />
 			<class name="com_goods_fanlimei.Goods_Test" />
+			<class name="com_run_zhangjiawang.Rules_Test" />
 			<class name="com_sell_zhangjiawang.Sell_Test" />
 			<class name="com_system_mengyuxuan.System_Test" />
 			<class name="com_system_songxiaoqian.System_Test" />
