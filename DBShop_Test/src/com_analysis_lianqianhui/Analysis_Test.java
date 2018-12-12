@@ -1,6 +1,7 @@
 package com_analysis_lianqianhui;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -12,13 +13,13 @@ public class Analysis_Test extends BaseTest{
 		webtest.quit();
 	}
 	
-	@BeforeTest
+	@BeforeClass
 	public void testlogin() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 //		webtest.click("xpath=//a[contains(.,'µÇÂ¼')]");
 		
 		webtest.type("name=user_name","admin");
-		webtest.type("name=user_passwd","111111");
+		webtest.type("name=user_passwd","123456");
 		webtest.click("xpath=//button[contains(.,'ºóÌ¨µÇÂ¼')]");
 		Thread.sleep(5000);
 		}

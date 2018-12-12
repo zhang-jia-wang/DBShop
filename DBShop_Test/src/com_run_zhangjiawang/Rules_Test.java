@@ -13,15 +13,16 @@ public class Rules_Test extends BaseTest{
 	public void login() throws Exception {
 	webtest.open("http://localhost:8032/DBShop/admin");
 	webtest.type("name=user_name","admin");
-	webtest.type("name=user_passwd","111111");
+	webtest.type("name=user_passwd","123456");
 	webtest.click("xpath=//button[@class='btn']");
 	}
 	
-//信息
+/*//信息
 	public void information(String a,String b,String c) throws Exception {
 	webtest.click("xpath=//a[contains(.,'运营管理 ')]");
 	webtest.click("xpath=//a[contains(.,'优惠促销规则')]");
-	webtest.click("xpath=//a[@class='btn btn-small btn-primary']");
+	Thread.sleep(2000);
+	webtest.click("xpath=//a[contains(.,' 添加新规则')]");
 	webtest.type("class=span3",a);
 	webtest.type("class=span6" ,b);
 	webtest.type("xpath=//input[@id='promotions_start_time']","2018-11-30");
@@ -63,7 +64,7 @@ public class Rules_Test extends BaseTest{
 			 Thread.sleep(4000);
 			}
 	@Test	
-	public void test1() throws Exception {		
+	public void test01() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'%')]");
 		group("xpath=//option[@value='all_user']","");
@@ -73,7 +74,7 @@ public class Rules_Test extends BaseTest{
 	
 }
 	@Test	
-	public void test2() throws Exception {		
+	public void test02() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'关闭')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");
@@ -82,7 +83,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test3() throws Exception {		
+	public void test03() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='user_group']","xpath=//label[contains(.,'普通会员')]");
@@ -91,7 +92,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test4() throws Exception {		
+	public void test04() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");		
@@ -100,7 +101,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test5() throws Exception {		
+	public void test05() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");		
@@ -109,7 +110,7 @@ public class Rules_Test extends BaseTest{
 		delete();
 }
 	@Test	
-	public void test6() throws Exception {		
+	public void test06() throws Exception {		
 		information("iphone","An apple","xpath=//option[contains(.,'开启')]");
 		cu("xpath=//option[contains(.,'元')]");
 		group("xpath=//option[@value='all_user']","");		
@@ -117,14 +118,14 @@ public class Rules_Test extends BaseTest{
 		save();
 		delete();
 }
-
+*/
 	
 	//优惠券的使用
 //基本信息
 	public void message(String g,String h) throws Exception {
 	webtest.click("xpath=//a[contains(.,'运营管理 ')]");
 	webtest.click("xpath=//a[@href='/DBShop/admin/goods/coupon']");
-	webtest.click("xpath=//a[@class='btn btn-small btn-primary']");
+	webtest.click("xpath=//a[contains(.,' 添加优惠券')]");
 	webtest.type("xpath=//input[@class='span3']",g);
 	webtest.type("xpath=//input[@class='span6']", h);
 	webtest.click("xpath=//select[@id='coupon_state']");
@@ -171,7 +172,7 @@ public void del() throws Exception {
 	 Thread.sleep(4000);
 	}
 @Test
-public void test7() throws Exception {
+public void test07() throws Exception {
 	message("毛衣","这个毛衣很暖的");
 	rule("100","10");
 	getrule("2018-12-9","2018-12-12","100");
@@ -180,7 +181,7 @@ public void test7() throws Exception {
 	del();
 }
 @Test
-public void test8() throws Exception {
+public void test08() throws Exception {
 	message("!!!!","这个毛衣很暖的");
 	rule("100","10");
 	getrule("2018-12-9","2018-12-12","100");
@@ -190,7 +191,7 @@ public void test8() throws Exception {
 }
 
 @Test
-public void test9() throws Exception {
+public void test09() throws Exception {
 	message("毛衣","这个毛衣很暖的");
 	rule("10","100");
 	getrule("2018-12-9","2018-12-12","100");
@@ -263,7 +264,7 @@ public void de() throws Exception {
 		 webtest.alertAccept();
 		 Thread.sleep(4000);		
 }
-@Test
+/*@Test
 public void test13() throws Exception {
 	click();
 	inf("双1212","促销活动");
@@ -278,13 +279,14 @@ public void test14() throws Exception {
 	search("优惠","打折","双12疯狂来袭");
 	sa();
 	de();
+	webtest.quit();*/
 }
 
 
 
 
 
-}
+
 
 	
 

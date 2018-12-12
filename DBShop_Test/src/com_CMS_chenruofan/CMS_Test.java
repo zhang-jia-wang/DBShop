@@ -22,7 +22,7 @@ public class CMS_Test extends BaseTest {
 	public void Search_Txt() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章']");
@@ -38,7 +38,7 @@ public class CMS_Test extends BaseTest {
 	public void Edit_Txt() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章']");
@@ -55,7 +55,7 @@ public class CMS_Test extends BaseTest {
 	public void Delete_Txt() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章']");
@@ -69,7 +69,7 @@ public class CMS_Test extends BaseTest {
 	public void View_Txt() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章']");
@@ -82,7 +82,7 @@ public class CMS_Test extends BaseTest {
 	public void Add_Arc() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章']");
@@ -98,7 +98,7 @@ public class CMS_Test extends BaseTest {
 	public void Add_Child() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章分类']");
@@ -114,7 +114,7 @@ public class CMS_Test extends BaseTest {
 	public void Edit_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章分类']");
@@ -131,7 +131,7 @@ public class CMS_Test extends BaseTest {
 	public void Delete_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章分类']");
@@ -152,7 +152,7 @@ public class CMS_Test extends BaseTest {
 		try {
 			webtest.open("http://localhost:8032/DBShop/admin");
 			webtest.type("id=user_name", "admin");
-			webtest.type("id=user_passwd", "111111");
+			webtest.type("id=user_passwd", "123456");
 			webtest.click("class=btn");
 			webtest.click("xpath=//a[text()='CMS管理 ']");
 			webtest.click("xpath=//a[text()='管理文章分类']");
@@ -176,7 +176,7 @@ public class CMS_Test extends BaseTest {
 	public void View_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章分类']");
@@ -194,7 +194,7 @@ public class CMS_Test extends BaseTest {
 	public void Add_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理文章分类']");
@@ -209,7 +209,7 @@ public class CMS_Test extends BaseTest {
 	public void Edit_Piece_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理单页文章']");
@@ -226,7 +226,7 @@ public class CMS_Test extends BaseTest {
 	public void Delete_Piece_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理单页文章']");
@@ -245,7 +245,7 @@ public class CMS_Test extends BaseTest {
 	public void View_Piece_Txt() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理单页文章']");
@@ -258,7 +258,7 @@ public class CMS_Test extends BaseTest {
 	public void Add_Piece_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='CMS管理 ']");
 		webtest.click("xpath=//a[text()='管理单页文章']");

@@ -21,7 +21,7 @@ public class Customer_Test extends BaseTest {
 	public void search_Customer() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -30,7 +30,7 @@ public class Customer_Test extends BaseTest {
 		webtest.type("xpath=//input[@name='user_start_id']", "1");
 		webtest.type("xpath=//input[@name='user_end_id']", "10");
 		webtest.type("xpath=//input[@name='user_name']", "测试用户2");
-		webtest.type("xpath=//input[@name='user_email']", "1111111112@qq.com");
+		webtest.type("xpath=//input[@name='user_email']", "1234561112@qq.com");
 		webtest.type("id=user_state", "开启");
 		webtest.type("id=search_start_time", "2018-11-20");
 		webtest.type("id=search_end_time", "2018-11-29");
@@ -42,7 +42,7 @@ public class Customer_Test extends BaseTest {
 	public void edit_Customer() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -56,11 +56,11 @@ public class Customer_Test extends BaseTest {
 	}
 
 	// =================================余额充值(√)========================================================
-	@Test
+	/*@Test
 	public void balance_Recharge() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -70,14 +70,14 @@ public class Customer_Test extends BaseTest {
 		webtest.type("id=money_change_num", "50");
 		webtest.type("id=money_pay_info", "备注");
 		webtest.click("xpath=//button[contains(.,'提交充值')]");
-	}
+	}*/
 
 	// =================================积分调整(√)========================================================
-	@Test
+	/*@Test
 	public void score_Adjust() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -87,14 +87,14 @@ public class Customer_Test extends BaseTest {
 		webtest.type("xpath=//input[@id='change_user_integral_num']", "10");
 		webtest.type("xpath=//textarea[@id='integral_log_info']", "备注信息");
 		webtest.click("xpath=//button[contains(.,'提交调整')]");
-	}
+	}*/
 
 	// =================================删除用户(√)========================================================
 	@Test
 	public void delete_Customer() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -114,7 +114,7 @@ public class Customer_Test extends BaseTest {
 	public void select_All() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -132,12 +132,12 @@ public class Customer_Test extends BaseTest {
 	}
 
 	// =================================新加客户(√)========================================================
-	@Test(dataProvider = "excel_add_customer", dataProviderClass = NSDataProvider.class)
+	/*@Test(dataProvider = "excel_add_customer", dataProviderClass = NSDataProvider.class)
 	public void add_Customer(String group_id, String user_name, String user_sex, String user_email, String password)
 			throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户']");
@@ -152,14 +152,14 @@ public class Customer_Test extends BaseTest {
 		webtest.type("id=user_password_con", password);
 		webtest.click("xpath=//button[contains(.,' 保存客户信息')]");
 		Thread.sleep(2000);
-	}
+	}*/
 
 	// =================================编辑客户扩展信息(√)========================================================
 	@Test
 	public void edit_ExtendManage() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='客户扩展信息']");
@@ -177,7 +177,7 @@ public class Customer_Test extends BaseTest {
 	public void delete_ExtendManage() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='客户扩展信息']");
@@ -197,7 +197,7 @@ public class Customer_Test extends BaseTest {
 	public void add_ExtendManage() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='客户扩展信息']");
@@ -215,7 +215,7 @@ public class Customer_Test extends BaseTest {
 	public void edit_CustomerGroup() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户组']");
@@ -233,7 +233,7 @@ public class Customer_Test extends BaseTest {
 	public void delete_CustomerGroup() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户组']");
@@ -253,7 +253,7 @@ public class Customer_Test extends BaseTest {
 	public void add_CustomerGroup() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.click("xpath=//a[text()='管理客户组']");
@@ -272,7 +272,7 @@ public class Customer_Test extends BaseTest {
 	public void search_Charge() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='客户余额']");
@@ -291,7 +291,7 @@ public class Customer_Test extends BaseTest {
 	public void delete_Charge() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='客户余额']");
@@ -311,7 +311,7 @@ public class Customer_Test extends BaseTest {
 	public void search_Yue() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='客户余额']");
@@ -329,7 +329,7 @@ public class Customer_Test extends BaseTest {
 	public void edit_Type() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
@@ -348,7 +348,7 @@ public class Customer_Test extends BaseTest {
 	public void edit_Regular() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
@@ -367,7 +367,7 @@ public class Customer_Test extends BaseTest {
 	public void delete_Regular() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='管理积分']");
@@ -386,7 +386,7 @@ public class Customer_Test extends BaseTest {
 	public void add_Regular() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("id=user_name", "admin");
-		webtest.type("id=user_passwd", "111111");
+		webtest.type("id=user_passwd", "123456");
 		webtest.click("class=btn");
 		webtest.click("xpath=//a[text()='客户管理 ']");
 		webtest.mouseoverElement("xpath=//a[text()='管理积分']");

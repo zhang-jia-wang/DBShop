@@ -498,7 +498,7 @@ public class System_Test extends BaseTest{
 		}
 		
 		
-		//验证第三方登录设置要求（在客户设置中）
+		/*//验证第三方登录设置要求（在客户设置中）
 		@Test
 		public void test45() throws Exception{	
 //			第三方登录
@@ -536,7 +536,7 @@ public class System_Test extends BaseTest{
 			webtest.click("xpath=//option[contains(.,'启用')]");
 			webtest.click("xpath=//button[contains(.,' 保存货币信息')]");
 			assertTrue(webtest.ifContains("货币设置"));
-		}
+		}*/
 		@Test
 		public void  test51()  throws Exception{		
 			//添加货币——货币选择“美元”——货币名称空——小数位数“4”——货币汇率“6.8362”——货币状态启用

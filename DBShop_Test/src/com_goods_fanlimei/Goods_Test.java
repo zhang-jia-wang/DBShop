@@ -23,7 +23,7 @@ public class Goods_Test extends BaseTest {
 	{
 		webtest.open("http://10.7.1.9:8686/DBShop/admin");
 		webtest.type("name=user_name", "admin");
-		webtest.type("name=user_passwd", "111111");
+		webtest.type("name=user_passwd", "123456");
 		webtest.click("xpath=//button[@type='submit']");		
 	}
 	
@@ -35,7 +35,7 @@ public class Goods_Test extends BaseTest {
 
 	@Test
 	// ---------------------------管理商品（完成）-------------------------------
-	public void goods_test()throws Exception
+	public void test01()throws Exception
 	{		
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		// 管理商品
@@ -61,7 +61,7 @@ public class Goods_Test extends BaseTest {
 	
 	@Test
 	//---------------------------------- 管理分类（完成）------------------------------------
-	public void class_test() throws Exception 
+	public void test02() throws Exception 
 	{	
 		//商品分类
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
@@ -82,7 +82,7 @@ public class Goods_Test extends BaseTest {
 	
 	@Test
 	//--------------------------- -------商品属性(完成）-------------------------------
-	public void property_test() throws Exception 
+	public void test03() throws Exception 
 	{	
 		//属性分组
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
@@ -104,7 +104,7 @@ public class Goods_Test extends BaseTest {
 		
 	@Test
 	// ----------------------------------商品品牌（完成）-------------------------------	
-	public void brand_test()throws Exception
+	public void test04()throws Exception
 	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/goods/brand']");
@@ -116,7 +116,7 @@ public class Goods_Test extends BaseTest {
 		
 	@Test
 	// ----------------------------------商品评价（完成）-------------------------------
-	public void evaluate_test()throws Exception
+	public void test05()throws Exception
 	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品评价')]");
@@ -125,7 +125,7 @@ public class Goods_Test extends BaseTest {
 	
 	@Test
 	//---------------------------------- 商品咨询（完成）------------------------------
-	public void consult_test()throws Exception
+	public void test06()throws Exception
 	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品咨询')]");
@@ -134,7 +134,7 @@ public class Goods_Test extends BaseTest {
 	
 	@Test
 	//---------------------------------- 商品标签（完成）------------------------------
-	public void label_test() throws Exception
+	public void test07() throws Exception
 	{
 		//商品标签分组
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
@@ -165,7 +165,7 @@ public class Goods_Test extends BaseTest {
 
 	@Test
 	// ----------------------------------商品索引(完成)-------------------------------
-	public void index_test()throws Exception
+	public void test08()throws Exception
 	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品索引')]");

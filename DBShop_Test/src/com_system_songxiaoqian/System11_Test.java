@@ -10,9 +10,9 @@ import com.webtest.core.BaseTest;
 public class System11_Test extends BaseTest {
 	@BeforeClass
 	public void admin() throws Exception {
-		webtest.open("http://10.7.1.9:8032/DBShop/admin");
+		webtest.open("http://localhost:8032/DBShop/admin");
 		webtest.type("name=user_name", "admin");
-		webtest.type("name=user_passwd", "111111");
+		webtest.type("name=user_passwd", "123456");
 		webtest.click("xpath=//button[@type='submit']");
 		Thread.sleep(6000);
 	}
@@ -264,7 +264,7 @@ public class System11_Test extends BaseTest {
 		
 	}
 
-	@Test
+	/*@Test
 	public void test18() throws Exception {
 		// 编辑地区
 		webtest.click("xpath=//a[contains(.,'系统管理 ')]");
@@ -323,8 +323,8 @@ public class System11_Test extends BaseTest {
 		webtest.click("xpath=//option[contains(@value,'1')]");
 		webtest.type("name=admin_name", "admin11");
 		webtest.type("name=admin_email", "admin11@126.com");
-		webtest.type("name=admin_password", "111111");
-		webtest.type("name=admin_password_con", "111111");
+		webtest.type("name=admin_password", "123456");
+		webtest.type("name=admin_password_con", "123456");
 		webtest.click("xpath=//button[@type='submit']");	
 	}
 	@Test
@@ -342,7 +342,7 @@ public class System11_Test extends BaseTest {
 		// 删除管理员
 		webtest.click("xpath=//table/tbody/tr[last()]/td[6]/a[contains(.,'删除')]");
 		webtest.alertAccept();
-	}
+	}*/
 	@Test
 	public void test22() throws Exception {
 		// 6.对管理员组进行验证
