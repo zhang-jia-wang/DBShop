@@ -1,6 +1,7 @@
 package com_analysis_lianqianhui;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
@@ -11,7 +12,7 @@ public class Analysis_Test extends BaseTest{
 		webtest.quit();
 	}
 	
-	@Test(priority=0)
+	@BeforeTest
 	public void testlogin() throws Exception {
 		webtest.open("http://localhost:8032/DBShop/admin");
 //		webtest.click("xpath=//a[contains(.,'登录')]");
@@ -21,18 +22,15 @@ public class Analysis_Test extends BaseTest{
 		webtest.click("xpath=//button[contains(.,'后台登录')]");
 		Thread.sleep(5000);
 		}
-	@Test(priority=1)
+	@Test
 	public void test1() throws Exception{
 		System.out.println("开始执行");
 		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'客户统计')]");
 		System.out.println("结束执行");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
-		Thread.sleep(3000);
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -40,7 +38,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -49,7 +46,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -59,18 +55,17 @@ public class Analysis_Test extends BaseTest{
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		Thread.sleep(3000);
 	}
-	@Test(priority=2)
+	@Test
 	public void test2() throws Exception {
 		//客户排行
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'客户排行')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
+		
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 
 		webtest.type("name=group_id", "普通会员");
 		
-		Thread.sleep(3000);
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -78,7 +73,7 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
+		
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -87,7 +82,7 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
+		
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -98,13 +93,13 @@ public class Analysis_Test extends BaseTest{
 		Thread.sleep(3000);
 	}
 	
-	@Test(priority=3)
+	@Test
 	public void test3() throws Exception {
 		//订单统计
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'订单统计')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
+		
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 		webtest.type("name=group_id", "普通会员");
 		
@@ -115,7 +110,7 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
+		
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -124,7 +119,7 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
+		
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -132,10 +127,10 @@ public class Analysis_Test extends BaseTest{
 		webtest.click("xpath=//input[@id='end_time']");
 		webtest.type("xpath=//input[@id='end_time']", "2018-12-05");
 		webtest.click("xpath=//button[contains(.,'查看')]");
-		Thread.sleep(3000);
+		
 	}
 	
-	@Test(priority=4)
+	@Test
 	public void test4() throws Exception {
 		//销售概括（订单走势图）
 		
@@ -143,10 +138,9 @@ public class Analysis_Test extends BaseTest{
 		webtest.click("xpath=//a[contains(.,'销售概况')]");
 		webtest.click("xpath=//a[contains(.,'订单走势图')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");   
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 		webtest.type("name=group_id", "普通会员");
-		Thread.sleep(3000);
+		
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -154,7 +148,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -163,7 +156,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -172,13 +164,14 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-12-05");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		Thread.sleep(3000);
+	}
+		@Test
+		public void test5() throws InterruptedException {
 		//销售走势图
 		webtest.click("xpath=//a[contains(.,'销售额走势图')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 		webtest.type("name=group_id", "普通会员");
-		Thread.sleep(3000);
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -186,7 +179,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -195,7 +187,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -203,20 +194,18 @@ public class Analysis_Test extends BaseTest{
 		webtest.click("xpath=//input[@id='end_time']");
 		webtest.type("xpath=//input[@id='end_time']", "2018-12-05");
 		webtest.click("xpath=//button[contains(.,'查看')]");
-		Thread.sleep(3000);
+	
 		
 	}
 	
-	@Test(priority=5)
-	public void test5() throws Exception {
+	@Test
+	public void test6() throws Exception {
 		//销售明细
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'销售明细')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 		webtest.type("name=group_id", "普通会员");
-		Thread.sleep(3000);
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -224,7 +213,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -233,7 +221,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -243,16 +230,14 @@ public class Analysis_Test extends BaseTest{
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		Thread.sleep(3000);
 	}
-	@Test(priority=6)
-	public void test6() throws Exception {
+	@Test
+	public void test7() throws Exception {
 		//销售排行
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'销售排行')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 		webtest.type("name=group_id", "普通会员");
-		Thread.sleep(3000);
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -260,7 +245,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -269,7 +253,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -280,18 +263,16 @@ public class Analysis_Test extends BaseTest{
 		Thread.sleep(3000);
 	}
 	
-	@Test(priority=7)
-	public void test7() throws Exception {
+	@Test
+	public void test8() throws Exception {
 		//分类销售分析
 		webtest.click("xpath=//a[contains(.,'统计分析')]");
 		webtest.click("xpath=//a[contains(.,'分类销售分析')]");
 		webtest.click("xpath=//a[contains(.,'最近7天')]");
-		Thread.sleep(3000);
 		webtest.click("xpath=//a[contains(.,'最近30天')]");
 		webtest.click("xpath=//select[@name='class_id']");
 		webtest.click("xpath=//option[contains(.,'零食')]");
 		webtest.type("name=group_id", "普通会员");
-		Thread.sleep(3000);
 		//日期范围在七天以内
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -299,7 +280,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-07");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围在30天以内
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
@@ -308,7 +288,6 @@ public class Analysis_Test extends BaseTest{
 		webtest.type("xpath=//input[@id='end_time']", "2018-11-20");
 		webtest.click("xpath=//button[contains(.,'查看')]");
 		//日期范围大于30天
-		Thread.sleep(3000);
 		webtest.typeAndClear("xpath=//input[@id='start_time']", " ");
 		webtest.click("xpath=//input[@id='start_time']");
 		webtest.type("xpath=//input[@id='start_time']", "2018-11-01");
