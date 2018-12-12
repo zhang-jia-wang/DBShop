@@ -16,8 +16,8 @@ import com.webtest.core.BaseTest;
  *
  */
 public class Goods_Test extends BaseTest {
-//	@BeforeClass
-	@Test(priority=0)
+	
+	@BeforeClass
 	// ---------------------------登录界面（完成）-----------------------------
 	public void login() throws Exception 
 	{
@@ -26,15 +26,17 @@ public class Goods_Test extends BaseTest {
 		webtest.type("name=user_passwd", "111111");
 		webtest.click("xpath=//button[@type='submit']");		
 	}
+	
+	
 	@AfterClass
 	public void quit() {
 		webtest.quit();
 	}
 
-	@Test(priority=1)
+	@Test
 	// ---------------------------管理商品（完成）-------------------------------
 	public void goods_test()throws Exception
-	{	
+	{		
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		// 管理商品
 		webtest.click("xpath=//a[contains(.,'管理商品')]");
@@ -57,10 +59,10 @@ public class Goods_Test extends BaseTest {
 		webtest.click("xpath=//button[@type='submit']");
 	}
 	
-	@Test(priority=2)
+	@Test
 	//---------------------------------- 管理分类（完成）------------------------------------
 	public void class_test() throws Exception 
-	{
+	{	
 		//商品分类
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'管理分类')]");
@@ -78,10 +80,10 @@ public class Goods_Test extends BaseTest {
 		webtest.click("xpath=//button[@type='submit']");
 	}	
 	
-	@Test(priority=3)
+	@Test
 	//--------------------------- -------商品属性(完成）-------------------------------
 	public void property_test() throws Exception 
-	{
+	{	
 		//属性分组
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.mouseoverElement("xpath=//a[contains(.,'商品属性')]");
@@ -100,10 +102,10 @@ public class Goods_Test extends BaseTest {
 		webtest.click("xpath=//button[@type='submit']");
 	}	
 		
-	@Test(priority=4)
+	@Test
 	// ----------------------------------商品品牌（完成）-------------------------------	
 	public void brand_test()throws Exception
-	{
+	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[@href='/DBShop/admin/goods/brand']");
 		webtest.click("xpath=//a[@class='btn btn-small btn-primary']");
@@ -112,25 +114,25 @@ public class Goods_Test extends BaseTest {
 		
 	}
 		
-	@Test(priority=5)
+	@Test
 	// ----------------------------------商品评价（完成）-------------------------------
 	public void evaluate_test()throws Exception
-	{
+	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品评价')]");
 	}
 		
 	
-	@Test(priority=6)
+	@Test
 	//---------------------------------- 商品咨询（完成）------------------------------
 	public void consult_test()throws Exception
-	{
+	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品咨询')]");
 	}	
 		
 	
-	@Test(priority=7)
+	@Test
 	//---------------------------------- 商品标签（完成）------------------------------
 	public void label_test() throws Exception
 	{
@@ -161,10 +163,10 @@ public class Goods_Test extends BaseTest {
 		webtest.click("xpath=//button[@type='submit']");	
 	}
 
-	@Test(priority=8)
+	@Test
 	// ----------------------------------商品索引(完成)-------------------------------
 	public void index_test()throws Exception
-	{
+	{	
 		webtest.click("xpath=//a[contains(.,'商品管理 ')]");
 		webtest.click("xpath=//a[contains(.,'商品索引')]");
 		webtest.click("xpath=//input[@name='goods_index']");
