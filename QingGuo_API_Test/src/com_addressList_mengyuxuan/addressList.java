@@ -1,4 +1,4 @@
-package com_addressList_mengyuxuan;
+package com.edu.test;
 
 import java.io.IOException;
 
@@ -14,11 +14,12 @@ public class addressList {
 		String url="/fgadmin/address/list/";
 		CookieStore cookie=Common.getLoginCookie("20000000009", "netease123");
 		String result=HttpDriver.doGet(ReadPro.getPropValue("URL")+url,cookie);
-		System.out.println("abc");
 		System.out.println(result);
 	}
+	
+	//查看地址列表
 	@Test
-	public void test3() throws Exception {
+	public void testSuccess() throws Exception {
 		addressListTest();
 	}
 }
