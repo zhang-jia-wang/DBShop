@@ -1,4 +1,4 @@
-package com.edu.test;
+package com_login_mengyuxuan;
 
 import static org.testng.Assert.assertTrue;
 
