@@ -47,7 +47,7 @@ public class LoginTest {
 	@Test
 	//Ê§°ÜµÇÂ¼£ºÃÜÂë¿ÕÖÃ
 	public void TestLoginFailed2() throws Exception {
-		loginTest("20000000000","   ");
+		loginTest("20000000000","    ");
 	}
 
 	@Test
