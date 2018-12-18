@@ -14,7 +14,7 @@ public class skuList {
 		System.out.println(result);
 	}
 	@Test
-	public void test2() throws Exception {
+	public void test() throws Exception {
 		skuListTest();
 	}
 }

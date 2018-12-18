@@ -14,7 +14,7 @@ import com.edu.core.BaseTest;
 import com.edu.core.HttpDriver;
 import com.edu.utils.Checker;
 import com.edu.utils.ReadPro;
-import com.webtest.sendEmail.WebTestListener2;
+import freemarker.WebTestListener;
 
 import net.sf.json.JSONObject;
 
