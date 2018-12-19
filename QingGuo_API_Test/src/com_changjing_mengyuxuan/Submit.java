@@ -25,7 +25,6 @@ import net.sf.json.JSONObject;
 
 
 public class Submit {
-	Port port = new Port();
 
 	public String address;
 	public String province;
