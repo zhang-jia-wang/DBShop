@@ -1,4 +1,4 @@
-package com.edu.changjing_mengyuxuan;
+package com_changjing_mengyuxuan;
 
 import java.io.IOException;
 
@@ -19,7 +19,6 @@ import com.edu.core.HttpDriver;
 import com.edu.test.Common;
 import com.edu.utils.ReadPro;
 
-import com_changjing.Port;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 

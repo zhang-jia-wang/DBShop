@@ -1,4 +1,4 @@
-package com.edu.changjing_mengyuxuan;
+package com_changjing_mengyuxuan;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
