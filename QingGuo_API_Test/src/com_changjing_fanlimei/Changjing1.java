@@ -72,8 +72,8 @@ public class Changjing1 {
 		
 	}
 	//登录
-	@Test(priority = 0)
-	public void login() throws Exception {
+	@Test
+	public void test01() throws Exception {
 		JSONObject user = new JSONObject();
 		user.element("phoneArea", "86");
 		user.element("phoneNumber", "20000000000");
@@ -81,8 +81,8 @@ public class Changjing1 {
 		this.doPost("http://study-perf.qa.netease.com/common/fgadmin/login", user);
 	}
 	//获取地址
-	@Test(priority = 1)
-	public void getAddress() throws ClientProtocolException, IOException {
+	@Test
+	public void test02() throws ClientProtocolException, IOException {
 		String result_address= this.doGet("http://study-perf.qa.netease.com/fgadmin/address/list");
 		JSONObject json=JSONObject.fromObject(result_address);
 		JSONObject address_list=json.getJSONObject("result").getJSONArray("list").getJSONObject(0);
@@ -100,16 +100,16 @@ public class Changjing1 {
 		System.out.println("收货地址信息:"+id_address_detail);
 	}
 	//获取运费
-	@Test(priority = 2)
-	public void getFee() throws ClientProtocolException, IOException {
+	@Test
+	public void test03() throws ClientProtocolException, IOException {
 		String result_fee= this.doGet("http://study-perf.qa.netease.com/common/getTransportFee?"+this.id_address_detail);
 		JSONObject json = JSONObject.fromObject(result_fee);
 		transportFee=json.getInt("result");
 		System.out.println("运费:"+transportFee);
 	}
 	//提交
-	@Test(priority = 3)
-	public void submit() throws Exception {
+	@Test
+	public void test04() throws Exception {
 		JSONObject json_submit=new JSONObject();
 		json_submit.element("skuIds","2,3");
 		json_submit.element("skuNumbers","1,1");

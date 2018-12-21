@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<listeners> 
-		<listener class-name="com.webtest.sendEmail.WebTestListener" /> 		
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="s1">
+	<listeners>
+		<listener class-name="freemarker.WebTestListener" />	
 	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="com_submit_songxiaoqian.submit"/>
-    </classes>
-  </test>
-</suite> 
+ 
+	<test name="t1">
+		<classes>	
+			<!-- <class name="com_addressList_mengyuxuan.addressList" />
+			<class name="com_delete_lianqianhui.Delete" />
+			<class name="com_getTransportFee_fanlimei.getTransportFee" />
+			<class name="com_login_mengyuxuan.LoginTest" />
+			<class name="com_new_chenruofan.New" />
+			<class name="com_skulist_zhangjiawang.skuList" />
+			<class name="com_submit_songxiaoqian.submit" />-->   
+			<class name="com_changjing_mengyuxuan.SkuListTest" />  
+			<class name="com_changjing_mengyuxuan.Submit" />  
+			<class name="com_changjing_fanlimei.Changjing1"/>
+			<class name="com_changjing_zhangjiawang.Changjing_five"/>
+		</classes>
+	</test>
+
+</suite>

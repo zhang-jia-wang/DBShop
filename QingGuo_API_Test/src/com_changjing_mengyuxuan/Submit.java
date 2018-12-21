@@ -1,4 +1,4 @@
-package com.edu.changjing_mengyuxuan;
+package com_changjing_mengyuxuan;
 
 import java.io.IOException;
 
@@ -19,7 +19,6 @@ import com.edu.core.HttpDriver;
 import com.edu.test.Common;
 import com.edu.utils.ReadPro;
 
-import com_changjing.Port;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -42,9 +41,9 @@ public class Submit {
 	public void http() {
 	  httpClient = HttpClients.createDefault();		
 	}
-	
-	@Test(priority=0)
-	public void login() throws Exception {
+	//登录
+	@Test
+	public void test01() throws Exception {
 		HttpPost httpPost = new HttpPost("http://study-perf.qa.netease.com/common/fgadmin/login");
 		httpPost.addHeader("Content-Type", "application/json");
 		StringEntity entity = new StringEntity("{\"phoneArea\":\"86\",\"phoneNumber\":\"20000000008\",\"password\":\"netease123\"}"
@@ -55,9 +54,9 @@ public class Submit {
 		System.out.println("登陆是："+EntityUtils.toString(httpEntity));
 //		response.close();
 		}
-	
-	@Test(priority=1)
-	public void getAddress() throws Exception {
+	//获取地址列表
+	@Test
+	public void test02() throws Exception {
 		HttpGet get = new HttpGet("http://study-perf.qa.netease.com/fgadmin/address/list");
 		get.addHeader("Content-Type", "application/json");
 		response = httpClient.execute(get);
@@ -70,9 +69,9 @@ public class Submit {
 
 
 	}
-	
-	@Test(priority=2)
-	public void getFee() throws Exception {
+	//获取运费
+	@Test
+	public void test03() throws Exception {
 		JSONObject json = JSONObject.fromObject(this.address);
 		JSONObject result = json.getJSONObject("result").getJSONArray("list").getJSONObject(0);
 		province = result.getString("province");
@@ -104,8 +103,8 @@ public class Submit {
 		String hobby="sport";
 		String.format("这个学生年龄%d，爱好是%s", age,hobby);*/
 	}
-	@Test(priority=3)
-	public void submit() throws Exception {
+	@Test
+	public void test04() throws Exception {
 		HttpPost httpPost = new HttpPost("http://study-perf.qa.netease.com/fgadmin/orders/submit");
 		httpPost.addHeader("Content-Type", "application/json");
 	
