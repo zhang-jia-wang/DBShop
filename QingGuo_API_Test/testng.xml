@@ -7,13 +7,13 @@
  
 	<test name="t1">
 		<classes>	
-			<!-- <class name="com_addressList_mengyuxuan.addressList" />
+			 <class name="com_addressList_mengyuxuan.addressList" />
 			<class name="com_delete_lianqianhui.Delete" />
 			<class name="com_getTransportFee_fanlimei.getTransportFee" />
 			<class name="com_login_mengyuxuan.LoginTest" />
 			<class name="com_new_chenruofan.New" />
 			<class name="com_skulist_zhangjiawang.skuList" />
-			<class name="com_submit_songxiaoqian.submit" />-->   
+			<class name="com_submit_songxiaoqian.submit" />   
 			<class name="com_changjing_mengyuxuan.SkuListTest" />  
 			<class name="com_changjing_mengyuxuan.Submit" />  
 			<class name="com_changjing_fanlimei.Changjing1"/>
